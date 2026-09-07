@@ -179,7 +179,7 @@
     sw.addEventListener('click', function () {
       var hex = sw.getAttribute('data-hex');
       if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(hex).then(function () { showToast(hex + ' copied'); })
+        navigator.clipboard.writeText(hex).then(function () { showToast(hex + ' copiado'); })
           .catch(function () { showToast(hex); });
       } else {
         showToast(hex);

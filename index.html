@@ -1,20 +1,20 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-PT">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- ============ SEO / meta (genérico do template) ============ -->
-  <title>nexa — Site of the Day</title>
-  <meta name="description" content="Página de vitrine (Site of the Day): layout, tipografia, espaçamentos e animações no estilo de uma página de premiação. Conteúdo é placeholder — troque pelo seu.">
+  <!-- ============ SEO / meta ============ -->
+  <title>nexa — Estúdio de design e desenvolvimento web</title>
+  <meta name="description" content="A nexa é um estúdio que desenha e desenvolve sites, marcas e produtos digitais. Conteúdo em construção.">
   <meta name="author" content="nexa">
   <meta name="theme-color" content="#f7f6f1">
   <link rel="canonical" href="/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="nexa — Site of the Day">
-  <meta property="og:description" content="Template de vitrine com layout, tipografia e animações fiéis ao estilo original.">
+  <meta property="og:title" content="nexa — Estúdio de design e desenvolvimento web">
+  <meta property="og:description" content="Sites, marcas e produtos digitais.">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23001739'/%3E%3Cpath d='M62 57C66 42 62 28 66 22a15 15 0 1 1 22 4c-2 14-12 24-26 31Z' fill='%23fbf6e9'/%3E%3Cpath d='M25 20 20 48' stroke='%2343567b' stroke-width='24' stroke-linecap='round'/%3E%3Cpath d='M25 20 83 78' stroke='%2343567b' stroke-width='24' stroke-linecap='round'/%3E%3Cpath d='M25 90C16 80 6 74 6 60a16 16 0 1 1 32 0c0 14-5 22-13 30Z' fill='%23f9b924'/%3E%3C/svg%3E">
+  <link rel="icon" href="imagens/nexa-favicon.png">
 
   <!-- ============ Fontes ============ -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,10 +53,10 @@
   <!-- ================= Marquee superior ================= -->
   <div class="marquee-top" aria-hidden="true">
     <div class="marquee-top__track" data-marquee>
-      <span class="marquee-top__item"><strong>New Season</strong></span>
-      <span class="marquee-top__item">Members get early access &amp; free returns</span>
+      <span class="marquee-top__item"><strong>Estúdio digital</strong></span>
+      <span class="marquee-top__item">Sites, marcas e produtos digitais</span>
       <span class="marquee-top__item"><strong>nexa</strong></span>
-      <span class="marquee-top__item">Announce a sale, launch or update right here</span>
+      <span class="marquee-top__item">Vamos criar algo juntos</span>
     </div>
   </div>
 
@@ -64,38 +64,31 @@
   <header class="site-header" data-header>
     <div class="site-header__inner">
       <a href="#top" class="brand" aria-label="nexa — início" data-cursor>
-        <span class="brand__mark" aria-hidden="true">
-          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M62 57C66 42 62 28 66 22a15 15 0 1 1 22 4c-2 14-12 24-26 31Z" fill="#001739"/>
-            <path d="M25 20 20 48" stroke="#001739" stroke-width="24" stroke-linecap="round"/>
-            <path d="M25 20 83 78" stroke="#001739" stroke-width="24" stroke-linecap="round"/>
-            <path d="M25 90C16 80 6 74 6 60a16 16 0 1 1 32 0c0 14-5 22-13 30Z" fill="#F9B924"/>
-          </svg>
+        <span class="brand__mark">
+          <img src="imagens/nexa-mark.png" alt="" width="28" height="28">
         </span>
         <span class="brand__word">nexa</span>
       </a>
 
-      <nav class="nav" aria-label="Primária">
+      <nav class="nav" aria-label="Principal">
         <button class="nav__link" type="button" data-dropdown aria-expanded="false">
-          Explore
+          Serviços
           <svg class="caret" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path stroke="currentColor" stroke-width="2" d="m6 9 6 6 6-6"/></svg>
         </button>
-        <a class="nav__link" href="#">Directory</a>
-        <a class="nav__link" href="#">Academy <span class="pillnew">New</span></a>
-        <a class="nav__link" href="#">Jobs</a>
-        <a class="nav__link" href="#">Market</a>
+        <a class="nav__link" href="#">Trabalhos</a>
+        <a class="nav__link" href="#">Estúdio</a>
+        <a class="nav__link" href="#">Blog</a>
+        <a class="nav__link" href="#">Contacto</a>
       </nav>
 
       <form class="search" role="search" onsubmit="return false">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" d="m20 20-3.5-3.5"/></svg>
-        <input type="text" placeholder="Search by Inspiration" aria-label="Search by Inspiration">
+        <input type="text" placeholder="Pesquisar" aria-label="Pesquisar">
       </form>
 
       <div class="header-actions">
-        <a href="#" class="link-plain">Log in</a>
-        <a href="#" class="link-plain">Sign Up</a>
-        <a href="#" class="btn btn--solid">Be Pro</a>
-        <a href="#" class="btn btn--ghost">Submit Website</a>
+        <a href="#" class="btn btn--ghost">Ver trabalhos</a>
+        <a href="#" class="btn btn--solid">Falar connosco</a>
       </div>
 
       <button class="burger" type="button" data-burger aria-label="Abrir menu" aria-expanded="false">
@@ -105,17 +98,13 @@
 
     <!-- Menu mobile -->
     <div class="mobile-nav" data-mobilenav>
-      <a href="#">Explore</a>
-      <a href="#">Directory</a>
-      <a href="#">Academy</a>
-      <a href="#">Jobs</a>
-      <a href="#">Market</a>
-      <div class="mobile-nav__row">
-        <a href="#" class="link-plain">Log in</a>
-        <a href="#" class="link-plain">Sign Up</a>
-      </div>
-      <a href="#" class="btn btn--solid">Be Pro</a>
-      <a href="#" class="btn btn--ghost">Submit Website</a>
+      <a href="#">Serviços</a>
+      <a href="#">Trabalhos</a>
+      <a href="#">Estúdio</a>
+      <a href="#">Blog</a>
+      <a href="#">Contacto</a>
+      <a href="#" class="btn btn--ghost">Ver trabalhos</a>
+      <a href="#" class="btn btn--solid">Falar connosco</a>
     </div>
   </header>
 
@@ -126,17 +115,17 @@
     <section class="shell hero">
       <div class="hero__bar">
         <div class="box-score" data-cursor>
-          <div class="box-score__top"><strong>SOTD</strong></div>
+          <div class="box-score__top"><strong>EST.</strong></div>
           <div class="box-score__bottom">
-            <strong data-count="7.41" data-decimals="2">7.41</strong><sub>/10</sub>
+            <strong>2020</strong>
           </div>
         </div>
 
         <div class="hero__actions">
-          <button class="iconbtn" type="button" aria-label="Salvar">
+          <button class="iconbtn" type="button" aria-label="Guardar">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M6 3h12v18l-6-4-6 4z"/></svg>
           </button>
-          <button class="iconbtn" type="button" aria-label="Compartilhar">
+          <button class="iconbtn" type="button" aria-label="Partilhar">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="18" cy="5" r="3" stroke="currentColor" stroke-width="2"/><circle cx="6" cy="12" r="3" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="19" r="3" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" d="m8.6 10.6 6.8-4.2M8.6 13.4l6.8 4.2"/></svg>
           </button>
           <a class="iconbtn" href="#" aria-label="Visitar site">
@@ -146,24 +135,24 @@
       </div>
 
       <div class="c-heading reveal">
-        <p class="eyebrow">Site of the Day — Sep 7, 2026</p>
+        <p class="eyebrow">Estúdio de design e desenvolvimento web</p>
         <h1 class="heading-1"><a href="#">nexa</a></h1>
         <p class="author">
           <span class="avatar" aria-hidden="true"></span>
-          <a href="#">nexa</a>
+          <a href="#">Sites · Marcas · Produtos digitais</a>
         </p>
       </div>
     </section>
 
-    <!-- ---------- Preview ---------- -->
+    <!-- ---------- Pré-visualização ---------- -->
     <section class="shell">
       <div class="box-figure reveal">
         <div class="box-figure__media">
           <div class="box-figure__tilt" data-tilt>
-            <div class="shot" role="img" aria-label="Prévia do site">
+            <div class="shot" role="img" aria-label="Pré-visualização do site">
               <span class="shot__logo">nexa</span>
-              <span class="shot__nav"><i>Story</i><i>Awards</i><i>Details</i><i>Contact</i></span>
-              <span class="shot__h">Official<br>Travel Guide</span>
+              <span class="shot__nav"><i>Início</i><i>Serviços</i><i>Trabalhos</i><i>Contacto</i></span>
+              <span class="shot__h">Estúdio<br>digital</span>
               <span class="shot__big">nexa</span>
             </div>
           </div>
@@ -172,172 +161,167 @@
         <div class="menu-float">
           <div class="menu-float__content">
             <span class="menu-float__brand" aria-hidden="true">
-              <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M62 57C66 42 62 28 66 22a15 15 0 1 1 22 4c-2 14-12 24-26 31Z" fill="#fbf6e9"/>
-                <path d="M25 20 20 48" stroke="#43567b" stroke-width="24" stroke-linecap="round"/>
-                <path d="M25 20 83 78" stroke="#43567b" stroke-width="24" stroke-linecap="round"/>
-                <path d="M25 90C16 80 6 74 6 60a16 16 0 1 1 32 0c0 14-5 22-13 30Z" fill="#f9b924"/>
-              </svg>
+              <img src="imagens/nexa-mark.png" alt="" width="22" height="22">
             </span>
-            <button type="button" data-scroll="#elements">Creator</button>
-            <button type="button" data-scroll="#palette">Font &amp; Color</button>
-            <button type="button" data-scroll="#tech">Details</button>
-            <button type="button" data-scroll="#score">Score</button>
-            <a class="visit" href="#" data-cursor>Visit Site</a>
+            <button type="button" data-scroll="#elements">Elementos</button>
+            <button type="button" data-scroll="#palette">Cores</button>
+            <button type="button" data-scroll="#tech">Detalhes</button>
+            <button type="button" data-scroll="#score">Notas</button>
+            <a class="visit" href="#" data-cursor>Visitar site</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ---------- Elements ---------- -->
+    <!-- ---------- Elementos ---------- -->
     <section id="elements" class="block">
       <div class="block__head reveal">
-        <h2 class="block__label">Elements</h2>
-        <p class="block__title">See the highlights of this website.</p>
+        <h2 class="block__label">Elementos</h2>
+        <p class="block__title">Os destaques deste site.</p>
       </div>
       <ul class="grid-cards grid-cards--4">
         <li class="card reveal" style="--i:0">
           <a class="card__media" href="#" data-cursor>
             <span class="ph ph--v1"></span>
             <span class="card__play" aria-hidden="true">▶</span>
-            <span class="card__badge">video</span>
+            <span class="card__badge">vídeo</span>
           </a>
-          <p class="card__tag">Element</p>
-          <h3 class="card__title"><a href="#">nexa : landing</a></h3>
-          <p class="card__from">from <a href="#">Header</a></p>
+          <p class="card__tag">Elemento</p>
+          <h3 class="card__title"><a href="#">nexa · página inicial</a></h3>
+          <p class="card__from">de <a href="#">Cabeçalho</a></p>
         </li>
         <li class="card reveal" style="--i:1">
           <a class="card__media" href="#" data-cursor>
             <span class="ph ph--v2"></span>
             <span class="card__play" aria-hidden="true">▶</span>
-            <span class="card__badge">video</span>
+            <span class="card__badge">vídeo</span>
           </a>
-          <p class="card__tag">Element</p>
-          <h3 class="card__title"><a href="#">nexa : navigation</a></h3>
-          <p class="card__from">from <a href="#">Menu</a></p>
+          <p class="card__tag">Elemento</p>
+          <h3 class="card__title"><a href="#">nexa · navegação</a></h3>
+          <p class="card__from">de <a href="#">Menu</a></p>
         </li>
         <li class="card reveal" style="--i:2">
           <a class="card__media" href="#" data-cursor>
             <span class="ph ph--v3"></span>
             <span class="card__play" aria-hidden="true">▶</span>
-            <span class="card__badge">video</span>
+            <span class="card__badge">vídeo</span>
           </a>
-          <p class="card__tag">Element</p>
-          <h3 class="card__title"><a href="#">nexa : animations</a></h3>
-          <p class="card__from">from <a href="#">Animation</a></p>
+          <p class="card__tag">Elemento</p>
+          <h3 class="card__title"><a href="#">nexa · animações</a></h3>
+          <p class="card__from">de <a href="#">Animação</a></p>
         </li>
         <li class="card reveal" style="--i:3">
           <a class="card__media" href="#" data-cursor>
             <span class="ph ph--v4"></span>
             <span class="card__play" aria-hidden="true">▶</span>
-            <span class="card__badge">video</span>
+            <span class="card__badge">vídeo</span>
           </a>
-          <p class="card__tag">Element</p>
-          <h3 class="card__title"><a href="#">nexa : interactions</a></h3>
-          <p class="card__from">from <a href="#">Mouse Interaction</a></p>
+          <p class="card__tag">Elemento</p>
+          <h3 class="card__title"><a href="#">nexa · interações</a></h3>
+          <p class="card__from">de <a href="#">Interação</a></p>
         </li>
       </ul>
     </section>
 
-    <!-- ---------- Color palette ---------- -->
+    <!-- ---------- Paleta de cores ---------- -->
     <section id="palette" class="block">
       <div class="block__head reveal">
-        <h2 class="block__label">Color Palette</h2>
-        <p class="block__title">This website uses a color palette of 4 colors.</p>
+        <h2 class="block__label">Paleta de cores</h2>
+        <p class="block__title">Este site usa uma paleta de 4 cores.</p>
       </div>
       <ul class="swatches reveal">
         <li>
           <button class="swatch" type="button" style="background:#001739" data-hex="#001739">
-            <strong>#001739</strong><small>NAVY</small>
+            <strong>#001739</strong><small>MARINHO</small>
           </button>
         </li>
         <li>
           <button class="swatch" type="button" style="background:#172C49" data-hex="#172C49">
-            <strong>#172C49</strong><small>NAVY 2</small>
+            <strong>#172C49</strong><small>MARINHO 2</small>
           </button>
         </li>
         <li>
           <button class="swatch swatch--ink" type="button" style="background:#FBF6E9" data-hex="#FBF6E9">
-            <strong>#FBF6E9</strong><small>CREAM</small>
+            <strong>#FBF6E9</strong><small>CREME</small>
           </button>
         </li>
         <li>
           <button class="swatch swatch--ink" type="button" style="background:#F9B924" data-hex="#F9B924">
-            <strong>#F9B924</strong><small>YELLOW</small>
+            <strong>#F9B924</strong><small>AMARELO</small>
           </button>
         </li>
       </ul>
     </section>
 
-    <!-- ---------- Technologies & Tools ---------- -->
+    <!-- ---------- Tecnologias e ferramentas ---------- -->
     <section id="tech" class="block">
       <div class="block__head reveal">
-        <h2 class="block__label">Technologies &amp; Tools</h2>
-        <p class="block__title">Tags applied by the community.</p>
+        <h2 class="block__label">Tecnologias e ferramentas</h2>
+        <p class="block__title">Etiquetas deste projeto.</p>
       </div>
       <ul class="tags reveal">
-        <li><a class="tag" href="#">Promotional</a></li>
-        <li><a class="tag" href="#">Web &amp; Interactive</a></li>
+        <li><a class="tag" href="#">Promocional</a></li>
+        <li><a class="tag" href="#">Web e interativo</a></li>
         <li><a class="tag" href="#">Experimental</a></li>
-        <li><a class="tag" href="#">Animation</a></li>
+        <li><a class="tag" href="#">Animação</a></li>
         <li><a class="tag" href="#">Clean</a></li>
-        <li><a class="tag" href="#">Colorful</a></li>
-        <li><a class="tag" href="#">Fullscreen</a></li>
-        <li><a class="tag" href="#">Graphic Design</a></li>
-        <li><a class="tag" href="#">Footer Design</a></li>
+        <li><a class="tag" href="#">Colorido</a></li>
+        <li><a class="tag" href="#">Ecrã inteiro</a></li>
+        <li><a class="tag" href="#">Design gráfico</a></li>
+        <li><a class="tag" href="#">Design de rodapé</a></li>
         <li><a class="tag" href="#">Motion</a></li>
         <li><a class="tag" href="#">Figma</a></li>
         <li><a class="tag" href="#">Framer</a></li>
       </ul>
     </section>
 
-    <!-- ---------- Description ---------- -->
+    <!-- ---------- Descrição ---------- -->
     <section id="description" class="block">
       <div class="block__head reveal">
-        <h2 class="block__label">Description</h2>
-        <p class="block__title">In the author&rsquo;s words.</p>
+        <h2 class="block__label">Descrição</h2>
+        <p class="block__title">Nas palavras do estúdio.</p>
       </div>
       <p class="prose reveal">
-        nexa is a studio that designs and builds websites and digital products.
-        <span class="prose--dim">This placeholder text stands in for the project description — replace it with your own copy in the next step.</span>
+        A nexa é um estúdio que desenha e desenvolve sites, marcas e produtos digitais.
+        <span class="prose--dim">Este texto é provisório — vamos substituí-lo pela descrição real no próximo passo.</span>
       </p>
     </section>
 
-    <!-- ---------- Inside look ---------- -->
+    <!-- ---------- Vista de perto ---------- -->
     <section id="inside" class="block">
       <div class="block__head reveal">
-        <h2 class="block__label">Inside look</h2>
-        <p class="block__title">Discover more details of this SOTD.</p>
+        <h2 class="block__label">Vista de perto</h2>
+        <p class="block__title">Mais detalhes do projeto.</p>
       </div>
       <ul class="grid-cards grid-cards--2">
         <li class="card reveal" style="--i:0">
           <a class="card__media" href="#" data-cursor>
             <span class="ph ph--d1"></span>
           </a>
-          <p class="card__tag">Element</p>
-          <h3 class="card__title"><a href="#">Great element</a></h3>
-          <p class="card__from">from <a href="#">Desktop thumbnail</a></p>
+          <p class="card__tag">Elemento</p>
+          <h3 class="card__title"><a href="#">Ótimo elemento</a></h3>
+          <p class="card__from">de <a href="#">Miniatura desktop</a></p>
         </li>
         <li class="card reveal" style="--i:1">
           <a class="card__media" href="#" data-cursor>
             <span class="ph ph--m1"></span>
           </a>
-          <p class="card__tag">Element</p>
-          <h3 class="card__title"><a href="#">Great element</a></h3>
-          <p class="card__from">from <a href="#">Mobile thumbnail</a></p>
+          <p class="card__tag">Elemento</p>
+          <h3 class="card__title"><a href="#">Ótimo elemento</a></h3>
+          <p class="card__from">de <a href="#">Miniatura mobile</a></p>
         </li>
       </ul>
     </section>
 
-    <!-- ---------- SOTD / Score ---------- -->
+    <!-- ---------- SOTD / Nota ---------- -->
     <section id="score" class="block">
       <div class="score-head reveal">
         <h2 class="score-head__title">
-          SOTD / Score
+          SOTD / Nota
           <span class="score-head__val" data-count="7.41" data-decimals="2">→ 7.41</span>
           <span class="score-head__max">/ 10</span>
         </h2>
-        <a href="#" class="link-underline">Evaluation System</a>
+        <a href="#" class="link-underline">Sistema de avaliação</a>
       </div>
 
       <div class="crit-list reveal">
@@ -349,21 +333,21 @@
           <span class="crit__slash">/ 10</span>
         </div>
         <div class="crit">
-          <span class="crit__name">Usability</span>
+          <span class="crit__name">Usabilidade</span>
           <span class="crit__weight">30%</span>
           <span class="crit__bar" data-bar="73.1"></span>
           <span class="crit__val" data-count="7.31" data-decimals="2">7.31</span>
           <span class="crit__slash">/ 10</span>
         </div>
         <div class="crit">
-          <span class="crit__name">Creativity</span>
+          <span class="crit__name">Criatividade</span>
           <span class="crit__weight">20%</span>
           <span class="crit__bar" data-bar="73.8"></span>
           <span class="crit__val" data-count="7.38" data-decimals="2">7.38</span>
           <span class="crit__slash">/ 10</span>
         </div>
         <div class="crit">
-          <span class="crit__name">Content</span>
+          <span class="crit__name">Conteúdo</span>
           <span class="crit__weight">10%</span>
           <span class="crit__bar" data-bar="73.1"></span>
           <span class="crit__val" data-count="7.31" data-decimals="2">7.31</span>
@@ -373,10 +357,10 @@
 
       <div class="votes reveal">
         <div class="votes__head">
-          <h3>Votes</h3>
+          <h3>Votos</h3>
           <div class="tabs" data-tabs>
-            <button type="button" class="is-active" data-tab="jury">Jury</button>
-            <button type="button" data-tab="community">Community Members</button>
+            <button type="button" class="is-active" data-tab="jury">Júri</button>
+            <button type="button" data-tab="community">Comunidade</button>
           </div>
         </div>
 
@@ -384,32 +368,32 @@
           <table class="vtable">
             <thead>
               <tr>
-                <th>Voter</th><th>Design</th><th>Usability</th><th>Creativity</th><th>Content</th><th>Overall</th>
+                <th>Votante</th><th>Design</th><th>Usabilidade</th><th>Criatividade</th><th>Conteúdo</th><th>Geral</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><span class="voter"><span class="voter__av" style="background:#001739">AR</span><span class="voter__meta"><a href="#">A. Rivera</a><small>Mexico · Creative Developer</small></span></span></td>
+                <td><span class="voter"><span class="voter__av" style="background:#001739">AR</span><span class="voter__meta"><a href="#">A. Rivera</a><small>México · Programador criativo</small></span></span></td>
                 <td>8.50</td><td>8.20</td><td>8.60</td><td>8.30</td><td class="strong">8.42</td>
               </tr>
               <tr>
-                <td><span class="voter"><span class="voter__av" style="background:#17335c">LN</span><span class="voter__meta"><a href="#">L. Novak</a><small>Czechia · UI/UX Designer</small></span></span></td>
+                <td><span class="voter"><span class="voter__av" style="background:#17335c">LN</span><span class="voter__meta"><a href="#">L. Novak</a><small>Chéquia · Designer UI/UX</small></span></span></td>
                 <td>7.30</td><td>7.10</td><td>7.40</td><td>7.20</td><td class="strong">7.26</td>
               </tr>
               <tr>
-                <td><span class="voter"><span class="voter__av" style="background:#0a4a86">MH</span><span class="voter__meta"><a href="#">M. Haddad</a><small>Jordan · Art Director</small></span></span></td>
+                <td><span class="voter"><span class="voter__av" style="background:#0a4a86">MH</span><span class="voter__meta"><a href="#">M. Haddad</a><small>Jordânia · Diretor de arte</small></span></span></td>
                 <td>6.90</td><td>7.00</td><td>7.10</td><td>6.80</td><td class="strong">6.95</td>
               </tr>
               <tr>
-                <td><span class="voter"><span class="voter__av" style="background:#b97e12">SO</span><span class="voter__meta"><a href="#">S. Okafor</a><small>Nigeria · Design Lead</small></span></span></td>
+                <td><span class="voter"><span class="voter__av" style="background:#b97e12">SO</span><span class="voter__meta"><a href="#">S. Okafor</a><small>Nigéria · Líder de design</small></span></span></td>
                 <td>7.40</td><td>7.30</td><td>7.50</td><td>7.40</td><td class="strong">7.40</td>
               </tr>
               <tr>
-                <td><span class="voter"><span class="voter__av" style="background:#3f5b7d">RB</span><span class="voter__meta"><a href="#">R. Bianchi</a><small>Italy · Front-end Developer</small></span></span></td>
+                <td><span class="voter"><span class="voter__av" style="background:#3f5b7d">RB</span><span class="voter__meta"><a href="#">R. Bianchi</a><small>Itália · Programador front-end</small></span></span></td>
                 <td>7.50</td><td>7.40</td><td>7.30</td><td>7.60</td><td class="strong">7.45</td>
               </tr>
               <tr>
-                <td><span class="voter"><span class="voter__av" style="background:#12406e">KA</span><span class="voter__meta"><a href="#">K. Andersen</a><small>Denmark · Product Designer</small></span></span></td>
+                <td><span class="voter"><span class="voter__av" style="background:#12406e">KA</span><span class="voter__meta"><a href="#">K. Andersen</a><small>Dinamarca · Designer de produto</small></span></span></td>
                 <td>7.70</td><td>7.50</td><td>7.60</td><td>7.40</td><td class="strong">7.55</td>
               </tr>
             </tbody>
@@ -420,12 +404,12 @@
           <table class="vtable">
             <thead>
               <tr>
-                <th>Voter</th><th>Design</th><th>Usability</th><th>Creativity</th><th>Content</th><th>Overall</th>
+                <th>Votante</th><th>Design</th><th>Usabilidade</th><th>Criatividade</th><th>Conteúdo</th><th>Geral</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><span class="voter"><span class="voter__av" style="background:#001739">CM</span><span class="voter__meta"><a href="#">Community Members</a><small>Pro &amp; Chief average</small></span></span></td>
+                <td><span class="voter"><span class="voter__av" style="background:#001739">CM</span><span class="voter__meta"><a href="#">Comunidade</a><small>Média Pro &amp; Chief</small></span></span></td>
                 <td>9.50</td><td>9.00</td><td>10.0</td><td>9.00</td><td class="strong">9.40</td>
               </tr>
             </tbody>
@@ -434,32 +418,32 @@
       </div>
     </section>
 
-    <!-- ---------- Dev Award ---------- -->
+    <!-- ---------- Prémio Dev ---------- -->
     <section id="dev" class="block">
       <div class="score-head reveal">
         <h2 class="score-head__title">
-          Dev Award
+          Prémio Dev
           <span class="score-head__val" data-count="7.39" data-decimals="2">→ 7.39</span>
           <span class="score-head__max">/ 10</span>
         </h2>
-        <a href="#" class="link-underline">Evaluation System</a>
+        <a href="#" class="link-underline">Sistema de avaliação</a>
       </div>
 
       <div class="crit-list reveal">
         <div class="crit crit--nw">
-          <span class="crit__name">Semantics / SEO</span>
+          <span class="crit__name">Semântica / SEO</span>
           <span class="crit__bar" data-bar="74"></span>
           <span class="crit__val" data-count="7.40" data-decimals="2">7.40</span>
           <span class="crit__slash">/ 10</span>
         </div>
         <div class="crit crit--nw">
-          <span class="crit__name">Animations / Transitions</span>
+          <span class="crit__name">Animações / Transições</span>
           <span class="crit__bar" data-bar="76"></span>
           <span class="crit__val" data-count="7.60" data-decimals="2">7.60</span>
           <span class="crit__slash">/ 10</span>
         </div>
         <div class="crit crit--nw">
-          <span class="crit__name">Accessibility</span>
+          <span class="crit__name">Acessibilidade</span>
           <span class="crit__bar" data-bar="70"></span>
           <span class="crit__val" data-count="7.00" data-decimals="2">7.00</span>
           <span class="crit__slash">/ 10</span>
@@ -471,13 +455,13 @@
           <span class="crit__slash">/ 10</span>
         </div>
         <div class="crit crit--nw">
-          <span class="crit__name">Responsive Design</span>
+          <span class="crit__name">Design responsivo</span>
           <span class="crit__bar" data-bar="80"></span>
           <span class="crit__val" data-count="8.00" data-decimals="2">8.00</span>
           <span class="crit__slash">/ 10</span>
         </div>
         <div class="crit crit--nw">
-          <span class="crit__name">Markup / Meta-data</span>
+          <span class="crit__name">Marcação / Metadados</span>
           <span class="crit__bar" data-bar="66"></span>
           <span class="crit__val" data-count="6.60" data-decimals="2">6.60</span>
           <span class="crit__slash">/ 10</span>
@@ -486,9 +470,9 @@
 
       <div class="votes reveal">
         <div class="votes__head">
-          <h3>Votes</h3>
+          <h3>Votos</h3>
           <div class="tabs" data-tabs>
-            <button type="button" class="is-active" data-tab="jury">Jury</button>
+            <button type="button" class="is-active" data-tab="jury">Júri</button>
           </div>
         </div>
 
@@ -496,28 +480,28 @@
           <table class="vtable vtable--dev">
             <thead>
               <tr>
-                <th>Voter</th><th>Semantics</th><th>Animations</th><th>Accessibility</th><th>WPO</th><th>Responsive</th><th>Markup</th><th>Overall</th>
+                <th>Votante</th><th>Semântica</th><th>Animações</th><th>Acessib.</th><th>WPO</th><th>Responsivo</th><th>Marcação</th><th>Geral</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><span class="voter"><span class="voter__av" style="background:#001739">TF</span><span class="voter__meta"><a href="#">T. Fischer</a><small>Germany · Creative Developer</small></span></span></td>
+                <td><span class="voter"><span class="voter__av" style="background:#001739">TF</span><span class="voter__meta"><a href="#">T. Fischer</a><small>Alemanha · Programador criativo</small></span></span></td>
                 <td>6.80</td><td>7.00</td><td>6.50</td><td>7.00</td><td>7.20</td><td>6.40</td><td class="strong">6.80</td>
               </tr>
               <tr>
-                <td><span class="voter"><span class="voter__av" style="background:#17335c">GR</span><span class="voter__meta"><a href="#">G. Rossi</a><small>Italy · Frontend Developer</small></span></span></td>
+                <td><span class="voter"><span class="voter__av" style="background:#17335c">GR</span><span class="voter__meta"><a href="#">G. Rossi</a><small>Itália · Programador front-end</small></span></span></td>
                 <td>7.30</td><td>7.40</td><td>7.00</td><td>7.20</td><td>7.60</td><td>7.00</td><td class="strong">7.25</td>
               </tr>
               <tr>
-                <td><span class="voter"><span class="voter__av" style="background:#0a4a86">JM</span><span class="voter__meta"><a href="#">J. Meyer</a><small>Austria · Creative Director</small></span></span></td>
+                <td><span class="voter"><span class="voter__av" style="background:#0a4a86">JM</span><span class="voter__meta"><a href="#">J. Meyer</a><small>Áustria · Diretor criativo</small></span></span></td>
                 <td>8.20</td><td>8.00</td><td>8.30</td><td>8.10</td><td>8.40</td><td>8.20</td><td class="strong">8.20</td>
               </tr>
               <tr>
-                <td><span class="voter"><span class="voter__av" style="background:#b97e12">PT</span><span class="voter__meta"><a href="#">P. Tran</a><small>Vietnam · Developer</small></span></span></td>
+                <td><span class="voter"><span class="voter__av" style="background:#b97e12">PT</span><span class="voter__meta"><a href="#">P. Tran</a><small>Vietname · Programador</small></span></span></td>
                 <td>7.70</td><td>7.80</td><td>7.50</td><td>7.60</td><td>7.90</td><td>7.50</td><td class="strong">7.70</td>
               </tr>
               <tr>
-                <td><span class="voter"><span class="voter__av" style="background:#3f5b7d">EC</span><span class="voter__meta"><a href="#">E. Costa</a><small>Portugal · Web Developer</small></span></span></td>
+                <td><span class="voter"><span class="voter__av" style="background:#3f5b7d">EC</span><span class="voter__meta"><a href="#">E. Costa</a><small>Portugal · Programador web</small></span></span></td>
                 <td>7.00</td><td>7.20</td><td>6.80</td><td>7.00</td><td>7.30</td><td>6.70</td><td class="strong">7.00</td>
               </tr>
             </tbody>
@@ -526,36 +510,36 @@
       </div>
     </section>
 
-    <!-- ---------- Collections ---------- -->
+    <!-- ---------- Coleções ---------- -->
     <section id="collections" class="block block--last">
       <div class="block__head reveal">
-        <h2 class="block__label">Collections</h2>
-        <p class="block__title">Explore more great collections.</p>
+        <h2 class="block__label">Coleções</h2>
+        <p class="block__title">Explora mais coleções.</p>
       </div>
       <ul class="grid-cards grid-cards--4">
         <li class="card reveal" style="--i:0">
           <a class="card__media" href="#" data-cursor><span class="ph ph--c1"></span></a>
-          <p class="card__tag">Collection · Inspiration</p>
-          <h3 class="card__title"><a href="#">Pastel Colors</a></h3>
-          <p class="card__from">followed by <span class="ava-stack" aria-hidden="true"><i></i><i></i><i></i></span> +167</p>
+          <p class="card__tag">Coleção · Inspiração</p>
+          <h3 class="card__title"><a href="#">Cores pastel</a></h3>
+          <p class="card__from">seguida por <span class="ava-stack" aria-hidden="true"><i></i><i></i><i></i></span> +167</p>
         </li>
         <li class="card reveal" style="--i:1">
           <a class="card__media" href="#" data-cursor><span class="ph ph--c2"></span></a>
-          <p class="card__tag">Collection · Resources</p>
-          <h3 class="card__title"><a href="#">Handy Tools for Designers</a></h3>
-          <p class="card__from">followed by <span class="ava-stack" aria-hidden="true"><i></i><i></i><i></i></span> +1047</p>
+          <p class="card__tag">Coleção · Recursos</p>
+          <h3 class="card__title"><a href="#">Ferramentas para designers</a></h3>
+          <p class="card__from">seguida por <span class="ava-stack" aria-hidden="true"><i></i><i></i><i></i></span> +1047</p>
         </li>
         <li class="card reveal" style="--i:2">
           <a class="card__media" href="#" data-cursor><span class="ph ph--c3"></span></a>
-          <p class="card__tag">Collection · Web Technology</p>
-          <h3 class="card__title"><a href="#">WebGL / HTML5 Games</a></h3>
-          <p class="card__from">followed by <span class="ava-stack" aria-hidden="true"><i></i><i></i><i></i></span> +74</p>
+          <p class="card__tag">Coleção · Tecnologia web</p>
+          <h3 class="card__title"><a href="#">Jogos WebGL / HTML5</a></h3>
+          <p class="card__from">seguida por <span class="ava-stack" aria-hidden="true"><i></i><i></i><i></i></span> +74</p>
         </li>
         <li class="card reveal" style="--i:3">
           <a class="card__media" href="#" data-cursor><span class="ph ph--c4"></span></a>
-          <p class="card__tag">Collection · Inspiration</p>
-          <h3 class="card__title"><a href="#">Horizontal Layout Websites</a></h3>
-          <p class="card__from">followed by <span class="ava-stack" aria-hidden="true"><i></i><i></i><i></i></span> +52</p>
+          <p class="card__tag">Coleção · Inspiração</p>
+          <h3 class="card__title"><a href="#">Sites com layout horizontal</a></h3>
+          <p class="card__from">seguida por <span class="ava-stack" aria-hidden="true"><i></i><i></i><i></i></span> +52</p>
         </li>
       </ul>
     </section>
@@ -566,66 +550,65 @@
     <div class="site-footer__inner">
       <div class="footer-top reveal">
         <div class="footer-cta">
-          <p class="footer-cta__k">Have a project?</p>
-          <a href="#" class="footer-cta__link">Submit your website</a>
+          <p class="footer-cta__k">Tem um projeto?</p>
+          <a href="#" class="footer-cta__link">Vamos conversar</a>
         </div>
         <form class="newsletter" onsubmit="return false">
-          <label for="nl">Sign up for the newsletter</label>
+          <label for="nl">Subscreva a newsletter</label>
           <div class="newsletter__field">
-            <input id="nl" type="email" placeholder="Your email" aria-label="Your email">
-            <button type="submit" aria-label="Assinar">→</button>
+            <input id="nl" type="email" placeholder="O seu email" aria-label="O seu email">
+            <button type="submit" aria-label="Subscrever">→</button>
           </div>
         </form>
       </div>
 
       <nav class="footer-cols reveal" aria-label="Rodapé">
         <div>
-          <h4>Awards</h4>
+          <h4>Estúdio</h4>
           <ul>
-            <li><a href="#">Winners</a></li>
-            <li><a href="#">Nominees</a></li>
-            <li><a href="#">Sites of the Day</a></li>
-            <li><a href="#">Sites of the Month</a></li>
+            <li><a href="#">Sobre nós</a></li>
+            <li><a href="#">Equipa</a></li>
+            <li><a href="#">Processo</a></li>
+            <li><a href="#">Carreiras</a></li>
           </ul>
         </div>
         <div>
-          <h4>Inspiration</h4>
+          <h4>Serviços</h4>
           <ul>
-            <li><a href="#">Collections</a></li>
-            <li><a href="#">Elements</a></li>
-            <li><a href="#">Websites</a></li>
+            <li><a href="#">Web design</a></li>
+            <li><a href="#">Desenvolvimento</a></li>
+            <li><a href="#">Branding</a></li>
           </ul>
         </div>
         <div>
-          <h4>Academy</h4>
+          <h4>Trabalhos</h4>
           <ul>
-            <li><a href="#">Courses</a></li>
-            <li><a href="#">Plans</a></li>
+            <li><a href="#">Projetos</a></li>
+            <li><a href="#">Casos de estudo</a></li>
           </ul>
         </div>
         <div>
-          <h4>Directory</h4>
+          <h4>Recursos</h4>
           <ul>
-            <li><a href="#">Professionals</a></li>
-            <li><a href="#">Agencies</a></li>
-            <li><a href="#">Freelancers</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contacto</a></li>
           </ul>
         </div>
         <div>
-          <h4>Company</h4>
+          <h4>Contacto</h4>
           <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Conferences</a></li>
-            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Email</a></li>
+            <li><a href="#">Telefone</a></li>
+            <li><a href="#">Marcar reunião</a></li>
           </ul>
         </div>
         <div>
           <h4>Legal</h4>
           <ul>
-            <li><a href="#">Cookies Policy</a></li>
-            <li><a href="#">Legal Terms</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Política de cookies</a></li>
+            <li><a href="#">Termos legais</a></li>
+            <li><a href="#">Privacidade</a></li>
           </ul>
         </div>
       </nav>
@@ -634,28 +617,26 @@
         <ul class="socials">
           <li><a href="#">Instagram</a></li>
           <li><a href="#">LinkedIn</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">YouTube</a></li>
-          <li><a href="#">TikTok</a></li>
-          <li><a href="#">Pinterest</a></li>
+          <li><a href="#">Behance</a></li>
+          <li><a href="#">Dribbble</a></li>
+          <li><a href="#">GitHub</a></li>
         </ul>
         <div class="footer-bottom__meta">
           <span>© 2026 nexa</span>
-          <span class="lang">EN</span>
+          <span class="lang">PT</span>
         </div>
       </div>
 
-      <div class="footer-word" aria-hidden="true">Showcase</div>
+      <div class="footer-word" aria-hidden="true">nexa</div>
     </div>
   </footer>
 
   <!-- ================= Cookie bar ================= -->
   <div class="cookie" data-cookie hidden>
-    <p>We use cookies to improve your experience. <a href="#">Cookie Policy</a>.</p>
+    <p>Usamos cookies para melhorar a sua experiência. <a href="#">Política de cookies</a>.</p>
     <div class="cookie__actions">
-      <button type="button" data-cookie-reject>Reject all</button>
-      <button type="button" data-cookie-accept class="is-primary">Accept all</button>
+      <button type="button" data-cookie-reject>Rejeitar tudo</button>
+      <button type="button" data-cookie-accept class="is-primary">Aceitar tudo</button>
     </div>
   </div>
 
