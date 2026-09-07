@@ -8,13 +8,13 @@
   <title>Nova Grotesk — Site of the Day</title>
   <meta name="description" content="Página de vitrine (Site of the Day): layout, tipografia, espaçamentos e animações no estilo de uma página de premiação. Conteúdo é placeholder — troque pelo seu.">
   <meta name="author" content="Studio Placeholder">
-  <meta name="theme-color" content="#f8f8f8">
+  <meta name="theme-color" content="#f7f6f1">
   <link rel="canonical" href="/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Nova Grotesk — Site of the Day">
   <meta property="og:description" content="Template de vitrine com layout, tipografia e animações fiéis ao estilo original.">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' fill='%23222'/%3E%3Cpath fill='%23fff' d='M11 3h2v5.6l4-4 1.4 1.4-4 4H20v2h-5.6l4 4L17 20.4l-4-4V22h-2v-5.6l-4 4L5.6 19l4-4H4v-2h5.6l-4-4L7 7.6l4 4z'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' fill='%23001739'/%3E%3Cpath fill='%23f9b924' d='M11 3h2v5.6l4-4 1.4 1.4-4 4H20v2h-5.6l4 4L17 20.4l-4-4V22h-2v-5.6l-4 4L5.6 19l4-4H4v-2h5.6l-4-4L7 7.6l4 4z'/%3E%3C/svg%3E">
 
   <!-- ============ Fontes ============ -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,8 +31,9 @@
             sans: ['"Inter Tight"', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif']
           },
           colors: {
-            ink: '#222222', paper: '#f8f8f8', mist: '#e9e9e9', line: '#e4e4e4',
-            muted: '#8a8a8a', sub: '#6f6f6f', accent: '#d82f2f', coal: '#1a1a1a', butter: '#fff083'
+            ink: '#001739', paper: '#f7f6f1', mist: '#ebe9e1', line: '#e3e0d6',
+            muted: '#7b8592', sub: '#556172', accent: '#f9b924', coal: '#172c49', butter: '#f9b924',
+            navy: '#001739', 'navy-2': '#172c49', cream: '#fbf6e9', yellow: '#f9b924'
           },
           maxWidth: { shell: '1160px' }
         }
@@ -231,17 +232,27 @@
     <section id="palette" class="block">
       <div class="block__head reveal">
         <h2 class="block__label">Color Palette</h2>
-        <p class="block__title">This website uses a color palette of 2 colors.</p>
+        <p class="block__title">This website uses a color palette of 4 colors.</p>
       </div>
       <ul class="swatches reveal">
         <li>
-          <button class="swatch" type="button" style="background:#D82F2F" data-hex="#D82F2F">
-            <strong>#D82F2F</strong><small>HEX</small>
+          <button class="swatch" type="button" style="background:#001739" data-hex="#001739">
+            <strong>#001739</strong><small>NAVY</small>
           </button>
         </li>
         <li>
-          <button class="swatch" type="button" style="background:#1A1A1A" data-hex="#1A1A1A">
-            <strong>#1A1A1A</strong><small>HEX</small>
+          <button class="swatch" type="button" style="background:#172C49" data-hex="#172C49">
+            <strong>#172C49</strong><small>NAVY 2</small>
+          </button>
+        </li>
+        <li>
+          <button class="swatch swatch--ink" type="button" style="background:#FBF6E9" data-hex="#FBF6E9">
+            <strong>#FBF6E9</strong><small>CREAM</small>
+          </button>
+        </li>
+        <li>
+          <button class="swatch swatch--ink" type="button" style="background:#F9B924" data-hex="#F9B924">
+            <strong>#F9B924</strong><small>YELLOW</small>
           </button>
         </li>
       </ul>
@@ -368,27 +379,27 @@
             </thead>
             <tbody>
               <tr>
-                <td><span class="voter"><span class="voter__av" style="background:#d82f2f">AR</span><span class="voter__meta"><a href="#">A. Rivera</a><small>Mexico · Creative Developer</small></span></span></td>
+                <td><span class="voter"><span class="voter__av" style="background:#001739">AR</span><span class="voter__meta"><a href="#">A. Rivera</a><small>Mexico · Creative Developer</small></span></span></td>
                 <td>8.50</td><td>8.20</td><td>8.60</td><td>8.30</td><td class="strong">8.42</td>
               </tr>
               <tr>
-                <td><span class="voter"><span class="voter__av" style="background:#1a1a1a">LN</span><span class="voter__meta"><a href="#">L. Novak</a><small>Czechia · UI/UX Designer</small></span></span></td>
+                <td><span class="voter"><span class="voter__av" style="background:#17335c">LN</span><span class="voter__meta"><a href="#">L. Novak</a><small>Czechia · UI/UX Designer</small></span></span></td>
                 <td>7.30</td><td>7.10</td><td>7.40</td><td>7.20</td><td class="strong">7.26</td>
               </tr>
               <tr>
-                <td><span class="voter"><span class="voter__av" style="background:#2f6bd8">MH</span><span class="voter__meta"><a href="#">M. Haddad</a><small>Jordan · Art Director</small></span></span></td>
+                <td><span class="voter"><span class="voter__av" style="background:#0a4a86">MH</span><span class="voter__meta"><a href="#">M. Haddad</a><small>Jordan · Art Director</small></span></span></td>
                 <td>6.90</td><td>7.00</td><td>7.10</td><td>6.80</td><td class="strong">6.95</td>
               </tr>
               <tr>
-                <td><span class="voter"><span class="voter__av" style="background:#d8912f">SO</span><span class="voter__meta"><a href="#">S. Okafor</a><small>Nigeria · Design Lead</small></span></span></td>
+                <td><span class="voter"><span class="voter__av" style="background:#b97e12">SO</span><span class="voter__meta"><a href="#">S. Okafor</a><small>Nigeria · Design Lead</small></span></span></td>
                 <td>7.40</td><td>7.30</td><td>7.50</td><td>7.40</td><td class="strong">7.40</td>
               </tr>
               <tr>
-                <td><span class="voter"><span class="voter__av" style="background:#2f9d55">RB</span><span class="voter__meta"><a href="#">R. Bianchi</a><small>Italy · Front-end Developer</small></span></span></td>
+                <td><span class="voter"><span class="voter__av" style="background:#3f5b7d">RB</span><span class="voter__meta"><a href="#">R. Bianchi</a><small>Italy · Front-end Developer</small></span></span></td>
                 <td>7.50</td><td>7.40</td><td>7.30</td><td>7.60</td><td class="strong">7.45</td>
               </tr>
               <tr>
-                <td><span class="voter"><span class="voter__av" style="background:#7a2fd8">KA</span><span class="voter__meta"><a href="#">K. Andersen</a><small>Denmark · Product Designer</small></span></span></td>
+                <td><span class="voter"><span class="voter__av" style="background:#12406e">KA</span><span class="voter__meta"><a href="#">K. Andersen</a><small>Denmark · Product Designer</small></span></span></td>
                 <td>7.70</td><td>7.50</td><td>7.60</td><td>7.40</td><td class="strong">7.55</td>
               </tr>
             </tbody>
@@ -404,7 +415,7 @@
             </thead>
             <tbody>
               <tr>
-                <td><span class="voter"><span class="voter__av" style="background:#222">CM</span><span class="voter__meta"><a href="#">Community Members</a><small>Pro &amp; Chief average</small></span></span></td>
+                <td><span class="voter"><span class="voter__av" style="background:#001739">CM</span><span class="voter__meta"><a href="#">Community Members</a><small>Pro &amp; Chief average</small></span></span></td>
                 <td>9.50</td><td>9.00</td><td>10.0</td><td>9.00</td><td class="strong">9.40</td>
               </tr>
             </tbody>
@@ -480,23 +491,23 @@
             </thead>
             <tbody>
               <tr>
-                <td><span class="voter"><span class="voter__av" style="background:#d82f2f">TF</span><span class="voter__meta"><a href="#">T. Fischer</a><small>Germany · Creative Developer</small></span></span></td>
+                <td><span class="voter"><span class="voter__av" style="background:#001739">TF</span><span class="voter__meta"><a href="#">T. Fischer</a><small>Germany · Creative Developer</small></span></span></td>
                 <td>6.80</td><td>7.00</td><td>6.50</td><td>7.00</td><td>7.20</td><td>6.40</td><td class="strong">6.80</td>
               </tr>
               <tr>
-                <td><span class="voter"><span class="voter__av" style="background:#1a1a1a">GR</span><span class="voter__meta"><a href="#">G. Rossi</a><small>Italy · Frontend Developer</small></span></span></td>
+                <td><span class="voter"><span class="voter__av" style="background:#17335c">GR</span><span class="voter__meta"><a href="#">G. Rossi</a><small>Italy · Frontend Developer</small></span></span></td>
                 <td>7.30</td><td>7.40</td><td>7.00</td><td>7.20</td><td>7.60</td><td>7.00</td><td class="strong">7.25</td>
               </tr>
               <tr>
-                <td><span class="voter"><span class="voter__av" style="background:#2f6bd8">JM</span><span class="voter__meta"><a href="#">J. Meyer</a><small>Austria · Creative Director</small></span></span></td>
+                <td><span class="voter"><span class="voter__av" style="background:#0a4a86">JM</span><span class="voter__meta"><a href="#">J. Meyer</a><small>Austria · Creative Director</small></span></span></td>
                 <td>8.20</td><td>8.00</td><td>8.30</td><td>8.10</td><td>8.40</td><td>8.20</td><td class="strong">8.20</td>
               </tr>
               <tr>
-                <td><span class="voter"><span class="voter__av" style="background:#d8912f">PT</span><span class="voter__meta"><a href="#">P. Tran</a><small>Vietnam · Developer</small></span></span></td>
+                <td><span class="voter"><span class="voter__av" style="background:#b97e12">PT</span><span class="voter__meta"><a href="#">P. Tran</a><small>Vietnam · Developer</small></span></span></td>
                 <td>7.70</td><td>7.80</td><td>7.50</td><td>7.60</td><td>7.90</td><td>7.50</td><td class="strong">7.70</td>
               </tr>
               <tr>
-                <td><span class="voter"><span class="voter__av" style="background:#2f9d55">EC</span><span class="voter__meta"><a href="#">E. Costa</a><small>Portugal · Web Developer</small></span></span></td>
+                <td><span class="voter"><span class="voter__av" style="background:#3f5b7d">EC</span><span class="voter__meta"><a href="#">E. Costa</a><small>Portugal · Web Developer</small></span></span></td>
                 <td>7.00</td><td>7.20</td><td>6.80</td><td>7.00</td><td>7.30</td><td>6.70</td><td class="strong">7.00</td>
               </tr>
             </tbody>
