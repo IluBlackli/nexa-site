@@ -161,11 +161,10 @@
   };
   var LANGS = ['pt', 'es', 'en'];
   function getLang() {
+    // Português por defeito; só muda se o utilizador já escolheu antes.
     var s;
     try { s = localStorage.getItem('lang'); } catch (e) {}
-    if (LANGS.indexOf(s) > -1) return s;
-    var n = (navigator.language || 'pt').slice(0, 2).toLowerCase();
-    return LANGS.indexOf(n) > -1 ? n : 'pt';
+    return LANGS.indexOf(s) > -1 ? s : 'pt';
   }
   function applyLang(lang) {
     if (LANGS.indexOf(lang) < 0) lang = 'pt';
@@ -189,13 +188,66 @@
     var md = document.querySelector('meta[name="description"]');
     if (md && d['_meta.desc']) md.setAttribute('content', d['_meta.desc']);
     try { localStorage.setItem('lang', lang); } catch (e) {}
-    $$('[data-langswitch]').forEach(function (s) { s.value = lang; });
+    $$('[data-langsel]').forEach(function (sel) {
+      var cur = sel.querySelector('[data-langsel-cur]');
+      if (cur) cur.textContent = lang.toUpperCase();
+      $$('[role="option"]', sel).forEach(function (o) {
+        o.setAttribute('aria-selected', String(o.getAttribute('data-lang') === lang));
+      });
+    });
     var lf = document.querySelector('.footer-bottom .lang');
     if (lf) lf.textContent = lang.toUpperCase();
   }
   applyLang(getLang());
-  $$('[data-langswitch]').forEach(function (s) {
-    s.addEventListener('change', function () { applyLang(s.value); });
+
+  /* ---------- Seletor de idioma (menu personalizado) ---------- */
+  $$('[data-langsel]').forEach(function (sel) {
+    var btn = sel.querySelector('.langsel__btn');
+    var menu = sel.querySelector('.langsel__menu');
+    if (!btn || !menu) return;
+    var opts = $$('[role="option"]', menu);
+    var inline = sel.classList.contains('langsel--mobile');
+
+    if (inline) { menu.hidden = false; }
+
+    var openMenu = function () {
+      if (inline) return;
+      menu.hidden = false;
+      btn.setAttribute('aria-expanded', 'true');
+      var act = menu.querySelector('[aria-selected="true"]') || opts[0];
+      if (act) act.focus();
+    };
+    var closeMenu = function (focusBtn) {
+      if (inline) return;
+      menu.hidden = true;
+      btn.setAttribute('aria-expanded', 'false');
+      if (focusBtn) btn.focus();
+    };
+
+    btn.addEventListener('click', function () {
+      menu.hidden ? openMenu() : closeMenu();
+    });
+    btn.addEventListener('keydown', function (ev) {
+      if (ev.key === 'ArrowDown' || ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); openMenu(); }
+    });
+
+    opts.forEach(function (o, i) {
+      o.addEventListener('click', function () {
+        applyLang(o.getAttribute('data-lang'));
+        closeMenu(true);
+        document.body.classList.remove('nav-open');
+      });
+      o.addEventListener('keydown', function (ev) {
+        if (ev.key === 'ArrowDown') { ev.preventDefault(); (opts[i + 1] || opts[0]).focus(); }
+        else if (ev.key === 'ArrowUp') { ev.preventDefault(); (opts[i - 1] || opts[opts.length - 1]).focus(); }
+        else if (ev.key === 'Escape') { ev.preventDefault(); closeMenu(true); }
+        else if (ev.key === 'Tab') { closeMenu(false); }
+      });
+    });
+
+    document.addEventListener('click', function (ev) {
+      if (!sel.contains(ev.target)) closeMenu(false);
+    });
   });
 
   /* ---------- Marquee: preenche a linha toda + loop infinito ---------- */

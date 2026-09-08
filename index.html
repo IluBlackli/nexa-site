@@ -92,11 +92,18 @@
       <div class="header-actions">
         <a href="#trabalhos" class="btn btn--ghost" data-scroll="#trabalhos" data-i18n="btn.verTrabalhos">Ver trabalhos</a>
         <a href="mailto:nexxacreative.web@gmail.com" class="btn btn--solid" data-contact data-i18n="btn.falar">Falar connosco</a>
-        <select class="lang-switch" data-langswitch aria-label="Idioma">
-          <option value="pt">PT</option>
-          <option value="es">ES</option>
-          <option value="en">EN</option>
-        </select>
+        <div class="langsel" data-langsel>
+          <button type="button" class="langsel__btn" aria-haspopup="listbox" aria-expanded="false" aria-label="Idioma / Language">
+            <svg class="langsel__globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18"/></svg>
+            <span class="langsel__cur" data-langsel-cur>PT</span>
+            <svg class="langsel__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <ul class="langsel__menu" role="listbox" aria-label="Idioma" hidden>
+            <li role="presentation"><button type="button" role="option" data-lang="pt" aria-selected="true"><span class="langsel__code">PT</span><span class="langsel__name">Português</span><svg class="langsel__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></button></li>
+            <li role="presentation"><button type="button" role="option" data-lang="es" aria-selected="false"><span class="langsel__code">ES</span><span class="langsel__name">Español</span><svg class="langsel__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></button></li>
+            <li role="presentation"><button type="button" role="option" data-lang="en" aria-selected="false"><span class="langsel__code">EN</span><span class="langsel__name">English</span><svg class="langsel__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></button></li>
+          </ul>
+        </div>
       </div>
 
       <button class="burger" type="button" data-burger aria-label="Abrir menu" data-i18n-attr="aria-label:aria.menu" aria-expanded="false">
@@ -117,11 +124,15 @@
       <a href="#" data-contact data-i18n="nav.contacto">Contacto</a>
       <a href="#trabalhos" class="btn btn--ghost" data-scroll="#trabalhos" data-i18n="btn.verTrabalhos">Ver trabalhos</a>
       <a href="mailto:nexxacreative.web@gmail.com" class="btn btn--solid" data-contact data-i18n="btn.falar">Falar connosco</a>
-      <select class="lang-switch lang-switch--mobile" data-langswitch aria-label="Idioma">
-        <option value="pt">Português</option>
-        <option value="es">Español</option>
-        <option value="en">English</option>
-      </select>
+      <div class="langsel langsel--mobile" data-langsel>
+        <span class="langsel__label">Idioma</span>
+        <button type="button" class="langsel__btn" aria-haspopup="listbox" aria-expanded="false" aria-label="Idioma / Language" hidden></button>
+        <ul class="langsel__menu" role="listbox" aria-label="Idioma">
+          <li role="presentation"><button type="button" role="option" data-lang="pt" aria-selected="true"><span class="langsel__code">PT</span><span class="langsel__name">Português</span><svg class="langsel__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></button></li>
+          <li role="presentation"><button type="button" role="option" data-lang="es" aria-selected="false"><span class="langsel__code">ES</span><span class="langsel__name">Español</span><svg class="langsel__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></button></li>
+          <li role="presentation"><button type="button" role="option" data-lang="en" aria-selected="false"><span class="langsel__code">EN</span><span class="langsel__name">English</span><svg class="langsel__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></button></li>
+        </ul>
+      </div>
     </div>
   </header>
 
