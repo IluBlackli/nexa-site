@@ -249,7 +249,13 @@ body.has-cursor .swatch { cursor: none; }
 .brand { display: inline-flex; align-items: center; gap: 8px; color: var(--cream); }
 .brand__mark { flex: none; display: block; }
 .brand__mark img { width: 30px; height: auto; display: block; }
-.brand__word { font-size: 1.35rem; font-weight: 600; letter-spacing: -.03em; line-height: 1; }
+.brand__word {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  line-height: 1;
+  color: #2e4a75;              /* navy tom sobre tom no header */
+}
 
 .nav { display: flex; align-items: center; gap: 22px; }
 .nav__link {
