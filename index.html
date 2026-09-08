@@ -80,7 +80,7 @@
         <a class="nav__link" href="#servicos" data-scroll="#servicos">Serviços</a>
         <a class="nav__link" href="#trabalhos" data-scroll="#trabalhos">Trabalhos</a>
         <a class="nav__link" href="#sobre" data-scroll="#sobre">Sobre</a>
-        <a class="nav__link" href="#">Contacto</a>
+        <a class="nav__link" href="#" data-contact>Contacto</a>
       </nav>
 
       <form class="search" role="search" onsubmit="return false">
@@ -89,8 +89,8 @@
       </form>
 
       <div class="header-actions">
-        <a href="#" class="btn btn--ghost">Ver trabalhos</a>
-        <a href="mailto:nexxacreative.web@gmail.com" class="btn btn--solid">Falar connosco</a>
+        <a href="#trabalhos" class="btn btn--ghost" data-scroll="#trabalhos">Ver trabalhos</a>
+        <a href="mailto:nexxacreative.web@gmail.com" class="btn btn--solid" data-contact>Falar connosco</a>
       </div>
 
       <button class="burger" type="button" data-burger aria-label="Abrir menu" aria-expanded="false">
@@ -103,9 +103,9 @@
       <a href="#servicos" data-scroll="#servicos">Serviços</a>
       <a href="#trabalhos" data-scroll="#trabalhos">Trabalhos</a>
       <a href="#sobre" data-scroll="#sobre">Sobre</a>
-      <a href="#">Contacto</a>
-      <a href="#" class="btn btn--ghost">Ver trabalhos</a>
-      <a href="mailto:nexxacreative.web@gmail.com" class="btn btn--solid">Falar connosco</a>
+      <a href="#" data-contact>Contacto</a>
+      <a href="#trabalhos" class="btn btn--ghost" data-scroll="#trabalhos">Ver trabalhos</a>
+      <a href="mailto:nexxacreative.web@gmail.com" class="btn btn--solid" data-contact>Falar connosco</a>
     </div>
   </header>
 
@@ -126,7 +126,7 @@
         </h1>
         <p class="hero-lead">Sites, IA, automação e software feitos à medida.</p>
         <div class="hero-cta">
-          <a href="mailto:nexxacreative.web@gmail.com" class="btn btn--solid">Falar connosco</a>
+          <a href="mailto:nexxacreative.web@gmail.com" class="btn btn--solid" data-contact>Falar connosco</a>
           <a href="#servicos" class="btn btn--ghost" data-scroll="#servicos">Ver serviços</a>
         </div>
       </div>
@@ -350,7 +350,7 @@
       <div class="footer-top reveal">
         <div class="footer-cta">
           <p class="footer-cta__k">Tem um projeto?</p>
-          <a href="mailto:nexxacreative.web@gmail.com" class="footer-cta__link">Vamos conversar</a>
+          <a href="mailto:nexxacreative.web@gmail.com" class="footer-cta__link" data-contact>Vamos conversar</a>
         </div>
       </div>
 
@@ -369,6 +369,8 @@
           <ul>
             <li><a href="mailto:nexxacreative.web@gmail.com">nexxacreative.web@gmail.com</a></li>
             <li><a href="tel:+351965262788">965 262 788</a></li>
+            <li><a href="https://wa.me/351965262788" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="https://calendly.com/nexxacreative-web/30min" target="_blank" rel="noopener">Marcar reunião</a></li>
           </ul>
         </div>
         <div>
@@ -395,6 +397,38 @@
       <div class="footer-word" aria-hidden="true">nexa</div>
     </div>
   </footer>
+
+  <!-- ================= Modal: falar connosco ================= -->
+  <div class="cmodal" data-cmodal hidden>
+    <div class="cmodal__backdrop" data-cmodal-close></div>
+    <div class="cmodal__box" role="dialog" aria-modal="true" aria-labelledby="cmodal-title">
+      <button class="cmodal__x" type="button" data-cmodal-close aria-label="Fechar">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+      <h2 id="cmodal-title" class="cmodal__title">Falar connosco</h2>
+      <p class="cmodal__sub">Escolhe a forma mais fácil para ti.</p>
+      <div class="cmodal__options">
+        <a class="cmodal__opt" href="https://wa.me/351965262788" target="_blank" rel="noopener">
+          <span class="cmodal__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.6-1.2.1-.1 0-.3 0-.4l-.8-1.9c-.2-.5-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3c-.3.3-.9.9-.9 2.1s.9 2.5 1.1 2.6c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.2.8 3 .6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.2-.2-.2-.4-.3Z"/></svg>
+          </span>
+          <span class="cmodal__txt"><strong>WhatsApp</strong><small>965 262 788</small></span>
+        </a>
+        <a class="cmodal__opt" href="https://calendly.com/nexxacreative-web/30min" target="_blank" rel="noopener">
+          <span class="cmodal__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+          </span>
+          <span class="cmodal__txt"><strong>Marcar reunião</strong><small>30 min · Calendly</small></span>
+        </a>
+        <a class="cmodal__opt" href="mailto:nexxacreative.web@gmail.com">
+          <span class="cmodal__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+          </span>
+          <span class="cmodal__txt"><strong>Email</strong><small>nexxacreative.web@gmail.com</small></span>
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!-- ================= Cookie bar ================= -->
   <div class="cookie" data-cookie hidden>

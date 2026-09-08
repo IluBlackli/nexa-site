@@ -228,6 +228,41 @@
     if (acc) acc.addEventListener('click', function () { choose('accept'); });
   }
 
+  /* ---------- Modal "Falar connosco" ---------- */
+  var cmodal = $('[data-cmodal]');
+  if (cmodal) {
+    var lastFocus = null;
+    var openModal = function (trigger) {
+      lastFocus = trigger || document.activeElement;
+      cmodal.hidden = false;
+      document.body.classList.add('cmodal-open');
+      var first = cmodal.querySelector('.cmodal__opt');
+      if (first) first.focus();
+    };
+    var closeModal = function () {
+      cmodal.hidden = true;
+      document.body.classList.remove('cmodal-open');
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    };
+    $$('[data-contact]').forEach(function (btn) {
+      btn.addEventListener('click', function (ev) {
+        ev.preventDefault();
+        openModal(btn);
+        document.body.classList.remove('nav-open');
+      });
+    });
+    $$('[data-cmodal-close]', cmodal).forEach(function (el) {
+      el.addEventListener('click', closeModal);
+    });
+    document.addEventListener('keydown', function (ev) {
+      if (ev.key === 'Escape' && !cmodal.hidden) closeModal();
+    });
+    // fechar ao escolher uma opção
+    $$('.cmodal__opt', cmodal).forEach(function (a) {
+      a.addEventListener('click', function () { setTimeout(closeModal, 60); });
+    });
+  }
+
   /* ---------- Ano no rodapé (dinâmico) ---------- */
   $$('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
 })();

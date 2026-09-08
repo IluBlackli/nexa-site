@@ -1055,8 +1055,87 @@ body.nav-open .mobile-nav { opacity: 1; transform: none; pointer-events: auto; }
 }
 
 /* -------------------------------------------------------------
-   14. Toast + cookie
+   14. Modal "Falar connosco" + Toast + cookie
    ------------------------------------------------------------- */
+.cmodal {
+  position: fixed;
+  inset: 0;
+  z-index: 9990;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+.cmodal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 15, 39, .55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  animation: cmodalFade .2s var(--ease);
+}
+.cmodal__box {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 30px 70px -20px rgba(0, 15, 39, .4);
+  animation: cmodalPop .28s var(--ease);
+}
+.cmodal__x {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  color: var(--sub);
+  transition: background .2s var(--ease), color .2s var(--ease);
+}
+.cmodal__x:hover { background: var(--mist); color: var(--ink); }
+.cmodal__x svg { width: 18px; height: 18px; }
+.cmodal__title { font-size: 1.35rem; font-weight: 700; letter-spacing: -.01em; }
+.cmodal__sub { margin-top: 4px; font-size: .95rem; color: var(--sub); }
+.cmodal__options { margin-top: 20px; display: flex; flex-direction: column; gap: 10px; }
+.cmodal__opt {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  transition: border-color .2s var(--ease), background .2s var(--ease), transform .2s var(--ease);
+}
+.cmodal__opt:hover {
+  border-color: var(--ink);
+  background: #fff;
+  transform: translateY(-1px);
+}
+.cmodal__icon {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--navy);
+  color: var(--cream);
+}
+.cmodal__icon svg { width: 20px; height: 20px; }
+.cmodal__txt { display: flex; flex-direction: column; min-width: 0; }
+.cmodal__txt strong { font-size: 1rem; font-weight: 600; }
+.cmodal__txt small { font-size: .82rem; color: var(--sub); overflow: hidden; text-overflow: ellipsis; }
+body.cmodal-open { overflow: hidden; }
+@keyframes cmodalFade { from { opacity: 0; } }
+@keyframes cmodalPop { from { opacity: 0; transform: translateY(12px) scale(.97); } }
+@media (prefers-reduced-motion: reduce) {
+  .cmodal__backdrop, .cmodal__box { animation: none; }
+}
+
 .toast {
   position: fixed;
   left: 50%;
