@@ -710,6 +710,24 @@ body.nav-open .mobile-nav { opacity: 1; transform: none; pointer-events: auto; }
 .card__from { font-size: .9rem; color: var(--sub); }
 .card__from a { border-bottom: 1px solid var(--line); }
 .card__desc { font-size: .92rem; line-height: 1.45; color: var(--sub); }
+
+/* Ilustrações dos serviços */
+#servicos .card__media { background: linear-gradient(155deg, #0a3260, #001229); }
+.card__art {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+.card__art svg {
+  width: 44%;
+  max-width: 96px;
+  height: auto;
+  color: var(--cream);
+  transition: transform .5s var(--ease);
+}
+.card:hover .card__art svg { transform: scale(1.07); }
 .card__link {
   display: inline-flex;
   align-items: center;
@@ -980,6 +998,7 @@ body.nav-open .mobile-nav { opacity: 1; transform: none; pointer-events: auto; }
 .footer-cols {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 44px 80px;
   padding: 56px 0;
 }
