@@ -6,7 +6,7 @@
 
   <!-- ============ SEO / meta ============ -->
   <title>NEXA</title>
-  <meta name="description" content="A nexa é um estúdio que desenha e desenvolve sites, marcas e produtos digitais. Conteúdo em construção.">
+  <meta name="description" content="A nexa é um estúdio de tecnologia: sites, software à medida, inteligência artificial e automação para empresas.">
   <meta name="author" content="nexa">
   <meta name="theme-color" content="#f7f6f1">
   <link rel="canonical" href="/">
@@ -54,22 +54,22 @@
   <div class="marquee-top" aria-hidden="true">
     <div class="marquee-top__track" data-marquee>
       <span class="marquee-top__item"><strong>NEXA</strong></span>
-      <span class="marquee-top__item">Sites</span>
+      <span class="marquee-top__item" data-i18n="mq.sites">Sites</span>
       <span class="marquee-top__item"><strong>NEXA</strong></span>
-      <span class="marquee-top__item">IA</span>
+      <span class="marquee-top__item" data-i18n="mq.ia">IA</span>
       <span class="marquee-top__item"><strong>NEXA</strong></span>
-      <span class="marquee-top__item">Automação</span>
+      <span class="marquee-top__item" data-i18n="mq.auto">Automação</span>
       <span class="marquee-top__item"><strong>NEXA</strong></span>
-      <span class="marquee-top__item">Software</span>
+      <span class="marquee-top__item" data-i18n="mq.soft">Software</span>
       <span class="marquee-top__item"><strong>NEXA</strong></span>
-      <span class="marquee-top__item">Inovação</span>
+      <span class="marquee-top__item" data-i18n="mq.inov">Inovação</span>
     </div>
   </div>
 
   <!-- ================= Header ================= -->
   <header class="site-header" data-header>
     <div class="site-header__inner">
-      <a href="#top" class="brand" aria-label="nexa — início" data-cursor>
+      <a href="#top" class="brand" aria-label="nexa" data-cursor>
         <span class="brand__mark">
           <img src="imagens/nexa-mark.png" alt="" width="30" height="31">
         </span>
@@ -77,37 +77,47 @@
       </a>
 
       <nav class="nav" aria-label="Principal">
-        <a class="nav__link" href="#sobre" data-scroll="#sobre">Sobre</a>
-        <a class="nav__link" href="#servicos" data-scroll="#servicos">Serviços</a>
-        <a class="nav__link" href="#trabalhos" data-scroll="#trabalhos">Trabalhos</a>
-        <a class="nav__link" href="#faq" data-scroll="#faq">FAQ</a>
-        <a class="nav__link" href="#" data-contact>Contacto</a>
+        <a class="nav__link" href="#sobre" data-scroll="#sobre" data-i18n="nav.sobre">Sobre</a>
+        <a class="nav__link" href="#servicos" data-scroll="#servicos" data-i18n="nav.servicos">Serviços</a>
+        <a class="nav__link" href="#trabalhos" data-scroll="#trabalhos" data-i18n="nav.trabalhos">Trabalhos</a>
+        <a class="nav__link" href="#faq" data-scroll="#faq" data-i18n="nav.faq">FAQ</a>
+        <a class="nav__link" href="#" data-contact data-i18n="nav.contacto">Contacto</a>
       </nav>
 
       <form class="search" role="search" onsubmit="return false">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" d="m20 20-3.5-3.5"/></svg>
-        <input type="text" placeholder="Pesquisar" aria-label="Pesquisar">
+        <input type="text" placeholder="Pesquisar" aria-label="Pesquisar" data-i18n-attr="placeholder:search.ph,aria-label:search.ph">
       </form>
 
       <div class="header-actions">
-        <a href="#trabalhos" class="btn btn--ghost" data-scroll="#trabalhos">Ver trabalhos</a>
-        <a href="mailto:nexxacreative.web@gmail.com" class="btn btn--solid" data-contact>Falar connosco</a>
+        <select class="lang-switch" data-langswitch aria-label="Idioma">
+          <option value="pt">PT</option>
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+        </select>
+        <a href="#trabalhos" class="btn btn--ghost" data-scroll="#trabalhos" data-i18n="btn.verTrabalhos">Ver trabalhos</a>
+        <a href="mailto:nexxacreative.web@gmail.com" class="btn btn--solid" data-contact data-i18n="btn.falar">Falar connosco</a>
       </div>
 
-      <button class="burger" type="button" data-burger aria-label="Abrir menu" aria-expanded="false">
+      <button class="burger" type="button" data-burger aria-label="Abrir menu" data-i18n-attr="aria-label:aria.menu" aria-expanded="false">
         <span></span><span></span>
       </button>
     </div>
 
     <!-- Menu mobile -->
     <div class="mobile-nav" data-mobilenav>
-      <a href="#sobre" data-scroll="#sobre">Sobre</a>
-      <a href="#servicos" data-scroll="#servicos">Serviços</a>
-      <a href="#trabalhos" data-scroll="#trabalhos">Trabalhos</a>
-      <a href="#faq" data-scroll="#faq">FAQ</a>
-      <a href="#" data-contact>Contacto</a>
-      <a href="#trabalhos" class="btn btn--ghost" data-scroll="#trabalhos">Ver trabalhos</a>
-      <a href="mailto:nexxacreative.web@gmail.com" class="btn btn--solid" data-contact>Falar connosco</a>
+      <a href="#sobre" data-scroll="#sobre" data-i18n="nav.sobre">Sobre</a>
+      <a href="#servicos" data-scroll="#servicos" data-i18n="nav.servicos">Serviços</a>
+      <a href="#trabalhos" data-scroll="#trabalhos" data-i18n="nav.trabalhos">Trabalhos</a>
+      <a href="#faq" data-scroll="#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="#" data-contact data-i18n="nav.contacto">Contacto</a>
+      <a href="#trabalhos" class="btn btn--ghost" data-scroll="#trabalhos" data-i18n="btn.verTrabalhos">Ver trabalhos</a>
+      <a href="mailto:nexxacreative.web@gmail.com" class="btn btn--solid" data-contact data-i18n="btn.falar">Falar connosco</a>
+      <select class="lang-switch lang-switch--mobile" data-langswitch aria-label="Idioma">
+        <option value="pt">Português</option>
+        <option value="es">Español</option>
+        <option value="en">English</option>
+      </select>
     </div>
   </header>
 
@@ -117,7 +127,7 @@
     <!-- ---------- Hero ---------- -->
     <section class="shell hero">
       <div class="c-heading reveal">
-        <p class="eyebrow">Estúdio digital</p>
+        <p class="eyebrow" data-i18n="hero.eyebrow">Estúdio digital</p>
         <h1 class="heading-1">
           <a href="#top" aria-label="nexa" class="hero-logo">
             <span class="hero-logo__word">
@@ -126,10 +136,10 @@
             </span>
           </a>
         </h1>
-        <p class="hero-lead">Sites, IA, automação e software feitos à medida.</p>
+        <p class="hero-lead" data-i18n="hero.lead">Sites, IA, automação e software feitos à medida.</p>
         <div class="hero-cta">
-          <a href="mailto:nexxacreative.web@gmail.com" class="btn btn--solid" data-contact>Falar connosco</a>
-          <a href="#servicos" class="btn btn--ghost" data-scroll="#servicos">Ver serviços</a>
+          <a href="mailto:nexxacreative.web@gmail.com" class="btn btn--solid" data-contact data-i18n="btn.falar">Falar connosco</a>
+          <a href="#servicos" class="btn btn--ghost" data-scroll="#servicos" data-i18n="btn.verServicos">Ver serviços</a>
         </div>
       </div>
     </section>
@@ -139,10 +149,10 @@
       <div class="box-figure reveal">
         <div class="box-figure__media">
           <div class="box-figure__tilt" data-tilt>
-            <div class="shot" role="img" aria-label="Pré-visualização do site">
+            <div class="shot" role="img" aria-label="nexa">
               <span class="shot__logo">nexa</span>
-              <span class="shot__nav"><i>Início</i><i>Serviços</i><i>Trabalhos</i><i>Contacto</i></span>
-              <span class="shot__h">Estúdio<br>digital</span>
+              <span class="shot__nav"><i data-i18n="shot.inicio">Início</i><i data-i18n="nav.servicos">Serviços</i><i data-i18n="nav.trabalhos">Trabalhos</i><i data-i18n="nav.contacto">Contacto</i></span>
+              <span class="shot__h" data-i18n-html="shot.h">Estúdio<br>digital</span>
               <span class="shot__big">nexa</span>
             </div>
           </div>
@@ -153,8 +163,8 @@
             <span class="menu-float__brand" aria-hidden="true">
               <img src="imagens/nexa-mark.png" alt="" width="22" height="22">
             </span>
-            <button type="button" data-scroll="#servicos">Serviços</button>
-            <a class="visit" href="#" data-cursor>Visitar site</a>
+            <button type="button" data-scroll="#servicos" data-i18n="nav.servicos">Serviços</button>
+            <a class="visit" href="#" data-cursor data-i18n="shot.visitar">Visitar site</a>
           </div>
         </div>
       </div>
@@ -163,8 +173,8 @@
     <!-- ---------- Sobre nós ---------- -->
     <section id="sobre" class="block">
       <div class="block__head reveal">
-        <h2 class="block__label">Sobre nós</h2>
-        <p class="block__title">Quem está por trás da nexa.</p>
+        <h2 class="block__label" data-i18n="about.label">Sobre nós</h2>
+        <p class="block__title" data-i18n="about.title">Quem está por trás da nexa.</p>
       </div>
       <div class="about reveal">
         <!-- Substituir o <span> por: <img src="imagens/a-tua-foto.jpg" alt="..."> -->
@@ -175,20 +185,20 @@
               <circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.6"/>
               <path d="M8.5 6 10 3.5h4L15.5 6" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
             </svg>
-            <span>A tua foto aqui</span>
+            <span data-i18n="about.photoPh">A tua foto aqui</span>
           </span>
         </figure>
         <div class="about__text">
           <div class="about__block">
-            <h3>Sobre mim</h3>
-            <p>Sou o Andrés. Formado em Gestão e Programação de Sistemas Informáticos, foi nessa área que comecei a desenvolver a minha experiência em tecnologia e programação.</p>
+            <h3 data-i18n="about.h1">Sobre mim</h3>
+            <p data-i18n="about.p1">Sou o Andrés. Formado em Gestão e Programação de Sistemas Informáticos, foi nessa área que comecei a desenvolver a minha experiência em tecnologia e programação.</p>
           </div>
           <div class="about__block">
-            <h3>A empresa</h3>
-            <p>Foi a partir daí que nasceu a <span class="brand-em">NEXA</span> — uma empresa focada em tecnologia: desenvolvimento de software, soluções web e inteligência artificial. Do primeiro esboço ao lançamento, cada projeto é acompanhado de perto.</p>
-            <p>Combinamos design, desenvolvimento de software, inteligência artificial e automação para criar soluções digitais que fazem a diferença no dia a dia dos negócios.</p>
-            <p>Desde um website profissional até uma plataforma completa ou um sistema de atendimento com IA, analisamos cada desafio e procuramos a solução mais eficiente.</p>
-            <p class="about__highlight">A sua ideia é o ponto de partida. A tecnologia é o que a transforma em realidade.</p>
+            <h3 data-i18n="about.h2">A empresa</h3>
+            <p data-i18n-html="about.p2">Foi a partir daí que nasceu a <span class="brand-em">NEXA</span> — uma empresa focada em tecnologia: desenvolvimento de software, soluções web e inteligência artificial. Do primeiro esboço ao lançamento, cada projeto é acompanhado de perto.</p>
+            <p data-i18n="about.p3">Combinamos design, desenvolvimento de software, inteligência artificial e automação para criar soluções digitais que fazem a diferença no dia a dia dos negócios.</p>
+            <p data-i18n="about.p4">Desde um website profissional até uma plataforma completa ou um sistema de atendimento com IA, analisamos cada desafio e procuramos a solução mais eficiente.</p>
+            <p class="about__highlight" data-i18n="about.highlight">A sua ideia é o ponto de partida. A tecnologia é o que a transforma em realidade.</p>
           </div>
         </div>
       </div>
@@ -197,8 +207,8 @@
     <!-- ---------- Serviços ---------- -->
     <section id="servicos" class="block">
       <div class="block__head reveal">
-        <h2 class="block__label">Serviços</h2>
-        <p class="block__title">O que a nexa faz.</p>
+        <h2 class="block__label" data-i18n="serv.label">Serviços</h2>
+        <p class="block__title" data-i18n="serv.title">O que a nexa faz.</p>
       </div>
       <ul class="grid-cards grid-cards--4">
         <li class="card reveal" style="--i:0">
@@ -216,9 +226,9 @@
             </span>
             <span class="card__num" aria-hidden="true">01</span>
           </a>
-          <p class="card__tag">Serviço</p>
-          <h3 class="card__title"><a href="#">Sites &amp; Web</a></h3>
-          <p class="card__desc">Websites, lojas online e landing pages — design e desenvolvimento à medida, rápidos e fáceis de gerir.</p>
+          <p class="card__tag" data-i18n="serv.tag">Serviço</p>
+          <h3 class="card__title"><a href="#" data-i18n="serv.1.title">Sites &amp; Web</a></h3>
+          <p class="card__desc" data-i18n="serv.1.desc">Websites, lojas online e landing pages — design e desenvolvimento à medida, rápidos e fáceis de gerir.</p>
         </li>
         <li class="card reveal" style="--i:1">
           <a class="card__media" href="#" data-cursor>
@@ -231,9 +241,9 @@
             </span>
             <span class="card__num" aria-hidden="true">02</span>
           </a>
-          <p class="card__tag">Serviço</p>
-          <h3 class="card__title"><a href="#">IA</a></h3>
-          <p class="card__desc">Chatbots, assistentes e integrações com modelos de IA aplicados aos produtos e ao atendimento.</p>
+          <p class="card__tag" data-i18n="serv.tag">Serviço</p>
+          <h3 class="card__title"><a href="#" data-i18n="serv.2.title">IA</a></h3>
+          <p class="card__desc" data-i18n="serv.2.desc">Chatbots, assistentes e integrações com modelos de IA aplicados aos produtos e ao atendimento.</p>
         </li>
         <li class="card reveal" style="--i:2">
           <a class="card__media" href="#" data-cursor>
@@ -248,9 +258,9 @@
             </span>
             <span class="card__num" aria-hidden="true">03</span>
           </a>
-          <p class="card__tag">Serviço</p>
-          <h3 class="card__title"><a href="#">Automação</a></h3>
-          <p class="card__desc">Automação de tarefas e fluxos de trabalho, integrações entre ferramentas — menos trabalho manual, menos erros.</p>
+          <p class="card__tag" data-i18n="serv.tag">Serviço</p>
+          <h3 class="card__title"><a href="#" data-i18n="serv.3.title">Automação</a></h3>
+          <p class="card__desc" data-i18n="serv.3.desc">Automação de tarefas e fluxos de trabalho, integrações entre ferramentas — menos trabalho manual, menos erros.</p>
         </li>
         <li class="card reveal" style="--i:3">
           <a class="card__media" href="#" data-cursor>
@@ -263,9 +273,9 @@
             </span>
             <span class="card__num" aria-hidden="true">04</span>
           </a>
-          <p class="card__tag">Serviço</p>
-          <h3 class="card__title"><a href="#">Software</a></h3>
-          <p class="card__desc">Aplicações web, plataformas e dashboards feitos de raiz, à medida de cada negócio.</p>
+          <p class="card__tag" data-i18n="serv.tag">Serviço</p>
+          <h3 class="card__title"><a href="#" data-i18n="serv.4.title">Software</a></h3>
+          <p class="card__desc" data-i18n="serv.4.desc">Aplicações web, plataformas e dashboards feitos de raiz, à medida de cada negócio.</p>
         </li>
       </ul>
     </section>
@@ -273,8 +283,8 @@
     <!-- ---------- Trabalhos ---------- -->
     <section id="trabalhos" class="block">
       <div class="block__head reveal">
-        <h2 class="block__label">Trabalhos</h2>
-        <p class="block__title">Alguns projetos que criámos.</p>
+        <h2 class="block__label" data-i18n="work.label">Trabalhos</h2>
+        <p class="block__title" data-i18n="work.title">Alguns projetos que criámos.</p>
       </div>
       <ul class="grid-cards grid-cards--3">
         <li class="card reveal" style="--i:0">
@@ -282,30 +292,30 @@
             <img class="card__shot" src="imagens/euro-mudancas.jpg" width="1000" height="625" alt="Euro Mudanças Lift — website" loading="lazy">
             <span class="card__num" aria-hidden="true">01</span>
           </a>
-          <p class="card__tag">Website</p>
+          <p class="card__tag" data-i18n="work.tag.website">Website</p>
           <h3 class="card__title"><a href="https://transporte-umber.vercel.app" target="_blank" rel="noopener">Euro Mudanças Lift</a></h3>
-          <p class="card__desc">Site institucional para uma empresa de mudanças nacionais e internacionais — serviços, áreas de atuação, portfólio e pedido de orçamento.</p>
-          <a class="card__link" href="https://transporte-umber.vercel.app" target="_blank" rel="noopener">Ver site →</a>
+          <p class="card__desc" data-i18n="work.1.desc">Site institucional para uma empresa de mudanças nacionais e internacionais — serviços, áreas de atuação, portfólio e pedido de orçamento.</p>
+          <a class="card__link" href="https://transporte-umber.vercel.app" target="_blank" rel="noopener" data-i18n="work.verSite">Ver site →</a>
         </li>
         <li class="card reveal" style="--i:1">
           <a class="card__media" href="https://csfadvogados.vercel.app" target="_blank" rel="noopener" data-cursor>
             <img class="card__shot" src="imagens/csf-advogados.jpg" width="1000" height="625" alt="CSF Advogados — website" loading="lazy">
             <span class="card__num" aria-hidden="true">02</span>
           </a>
-          <p class="card__tag">Website</p>
+          <p class="card__tag" data-i18n="work.tag.website">Website</p>
           <h3 class="card__title"><a href="https://csfadvogados.vercel.app" target="_blank" rel="noopener">CSF Advogados</a></h3>
-          <p class="card__desc">Site institucional de um escritório de advocacia — serviços, áreas de atuação, equipa e marcação de consulta, em três idiomas.</p>
-          <a class="card__link" href="https://csfadvogados.vercel.app" target="_blank" rel="noopener">Ver site →</a>
+          <p class="card__desc" data-i18n="work.2.desc">Site institucional de um escritório de advocacia — serviços, áreas de atuação, equipa e marcação de consulta, em três idiomas.</p>
+          <a class="card__link" href="https://csfadvogados.vercel.app" target="_blank" rel="noopener" data-i18n="work.verSite">Ver site →</a>
         </li>
         <li class="card reveal" style="--i:2">
           <a class="card__media" href="#" data-cursor>
             <span class="ph ph--v3"></span>
             <span class="card__num" aria-hidden="true">03</span>
           </a>
-          <p class="card__tag">IA &amp; Automação</p>
-          <h3 class="card__title"><a href="#">Assistente virtual</a></h3>
-          <p class="card__desc">Chatbot que responde a clientes 24/7 e encaminha os pedidos para a equipa certa.</p>
-          <a class="card__link" href="#">Ver projeto →</a>
+          <p class="card__tag" data-i18n="work.tag.ia">IA &amp; Automação</p>
+          <h3 class="card__title"><a href="#" data-i18n="work.3.title">Assistente virtual</a></h3>
+          <p class="card__desc" data-i18n="work.3.desc">Chatbot que responde a clientes 24/7 e encaminha os pedidos para a equipa certa.</p>
+          <a class="card__link" href="#" data-i18n="work.verProjeto">Ver projeto →</a>
         </li>
       </ul>
     </section>
@@ -313,33 +323,33 @@
     <!-- ---------- FAQ ---------- -->
     <section id="faq" class="block block--last">
       <div class="block__head reveal">
-        <h2 class="block__label">FAQ</h2>
-        <p class="block__title">Perguntas frequentes.</p>
+        <h2 class="block__label" data-i18n="faq.label">FAQ</h2>
+        <p class="block__title" data-i18n="faq.title">Perguntas frequentes.</p>
       </div>
       <div class="faq reveal">
         <details class="faq__item">
-          <summary class="faq__q">A nexa trabalha com empresas de qualquer área?<span class="faq__icon" aria-hidden="true"></span></summary>
-          <div class="faq__a"><p>Sim. Desenvolvemos soluções personalizadas para diferentes tipos de negócios, adaptando a tecnologia às necessidades de cada empresa.</p></div>
+          <summary class="faq__q"><span data-i18n="faq.q1">A nexa trabalha com empresas de qualquer área?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+          <div class="faq__a"><p data-i18n="faq.a1">Sim. Desenvolvemos soluções personalizadas para diferentes tipos de negócios, adaptando a tecnologia às necessidades de cada empresa.</p></div>
         </details>
         <details class="faq__item">
-          <summary class="faq__q">Quanto custa criar um website?<span class="faq__icon" aria-hidden="true"></span></summary>
-          <div class="faq__a"><p>O investimento depende da dimensão, funcionalidades e necessidades do projeto. Depois de conhecermos o seu negócio, podemos apresentar uma solução adequada.</p></div>
+          <summary class="faq__q"><span data-i18n="faq.q2">Quanto custa criar um website?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+          <div class="faq__a"><p data-i18n="faq.a2">O investimento depende da dimensão, funcionalidades e necessidades do projeto. Depois de conhecermos o seu negócio, podemos apresentar uma solução adequada.</p></div>
         </details>
         <details class="faq__item">
-          <summary class="faq__q">É possível adicionar inteligência artificial ao meu negócio?<span class="faq__icon" aria-hidden="true"></span></summary>
-          <div class="faq__a"><p>Sim. Podemos analisar os seus processos e identificar oportunidades onde a inteligência artificial e a automação podem melhorar a eficiência.</p></div>
+          <summary class="faq__q"><span data-i18n="faq.q3">É possível adicionar inteligência artificial ao meu negócio?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+          <div class="faq__a"><p data-i18n="faq.a3">Sim. Podemos analisar os seus processos e identificar oportunidades onde a inteligência artificial e a automação podem melhorar a eficiência.</p></div>
         </details>
         <details class="faq__item">
-          <summary class="faq__q">Quanto tempo demora um projeto?<span class="faq__icon" aria-hidden="true"></span></summary>
-          <div class="faq__a"><p>Cada projeto é diferente. O prazo depende da sua complexidade, funcionalidades e objetivos. Após a primeira análise, apresentamos uma estimativa.</p></div>
+          <summary class="faq__q"><span data-i18n="faq.q4">Quanto tempo demora um projeto?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+          <div class="faq__a"><p data-i18n="faq.a4">Cada projeto é diferente. O prazo depende da sua complexidade, funcionalidades e objetivos. Após a primeira análise, apresentamos uma estimativa.</p></div>
         </details>
         <details class="faq__item">
-          <summary class="faq__q">Posso pedir apenas um chatbot?<span class="faq__icon" aria-hidden="true"></span></summary>
-          <div class="faq__a"><p>Claro. Podemos desenvolver apenas uma solução de IA ou combiná-la com um website, software ou outras automações.</p></div>
+          <summary class="faq__q"><span data-i18n="faq.q5">Posso pedir apenas um chatbot?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+          <div class="faq__a"><p data-i18n="faq.a5">Claro. Podemos desenvolver apenas uma solução de IA ou combiná-la com um website, software ou outras automações.</p></div>
         </details>
         <details class="faq__item">
-          <summary class="faq__q">Fazem manutenção depois de entregar o projeto?<span class="faq__icon" aria-hidden="true"></span></summary>
-          <div class="faq__a"><p>Sim. Podemos continuar a acompanhar o projeto após o lançamento, realizando atualizações, melhorias e suporte.</p></div>
+          <summary class="faq__q"><span data-i18n="faq.q6">Fazem manutenção depois de entregar o projeto?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+          <div class="faq__a"><p data-i18n="faq.a6">Sim. Podemos continuar a acompanhar o projeto após o lançamento, realizando atualizações, melhorias e suporte.</p></div>
         </details>
       </div>
     </section>
@@ -351,36 +361,36 @@
     <div class="site-footer__inner">
       <div class="footer-top reveal">
         <div class="footer-cta">
-          <p class="footer-cta__k">Tem um projeto?</p>
-          <a href="mailto:nexxacreative.web@gmail.com" class="footer-cta__link" data-contact>Vamos conversar</a>
+          <p class="footer-cta__k" data-i18n="foot.cta.k">Tem um projeto?</p>
+          <a href="mailto:nexxacreative.web@gmail.com" class="footer-cta__link" data-contact data-i18n="foot.cta.link">Vamos conversar</a>
         </div>
       </div>
 
       <nav class="footer-cols reveal" aria-label="Rodapé">
         <div>
-          <h4>Explorar</h4>
+          <h4 data-i18n="foot.col.explorar">Explorar</h4>
           <ul>
-            <li><a href="#servicos" data-scroll="#servicos">Serviços</a></li>
-            <li><a href="#trabalhos" data-scroll="#trabalhos">Trabalhos</a></li>
-            <li><a href="#sobre" data-scroll="#sobre">Sobre</a></li>
-            <li><a href="#faq" data-scroll="#faq">FAQ</a></li>
+            <li><a href="#servicos" data-scroll="#servicos" data-i18n="nav.servicos">Serviços</a></li>
+            <li><a href="#trabalhos" data-scroll="#trabalhos" data-i18n="nav.trabalhos">Trabalhos</a></li>
+            <li><a href="#sobre" data-scroll="#sobre" data-i18n="nav.sobre">Sobre</a></li>
+            <li><a href="#faq" data-scroll="#faq" data-i18n="nav.faq">FAQ</a></li>
           </ul>
         </div>
         <div>
-          <h4>Contacto</h4>
+          <h4 data-i18n="foot.col.contacto">Contacto</h4>
           <ul>
             <li><a href="mailto:nexxacreative.web@gmail.com">nexxacreative.web@gmail.com</a></li>
             <li><a href="tel:+351965262788">965 262 788</a></li>
             <li><a href="https://wa.me/351965262788" target="_blank" rel="noopener">WhatsApp</a></li>
-            <li><a href="https://calendly.com/nexxacreative-web/30min" target="_blank" rel="noopener">Marcar reunião</a></li>
+            <li><a href="https://calendly.com/nexxacreative-web/30min" target="_blank" rel="noopener" data-i18n="foot.marcar">Marcar reunião</a></li>
           </ul>
         </div>
         <div>
-          <h4>Legal</h4>
+          <h4 data-i18n="foot.col.legal">Legal</h4>
           <ul>
-            <li><a href="#">Política de cookies</a></li>
-            <li><a href="#">Termos legais</a></li>
-            <li><a href="#">Privacidade</a></li>
+            <li><a href="#" data-i18n="foot.legal.cookies">Política de cookies</a></li>
+            <li><a href="#" data-i18n="foot.legal.terms">Termos legais</a></li>
+            <li><a href="#" data-i18n="foot.legal.privacy">Privacidade</a></li>
           </ul>
         </div>
       </nav>
@@ -404,11 +414,11 @@
   <div class="cmodal" data-cmodal hidden>
     <div class="cmodal__backdrop" data-cmodal-close></div>
     <div class="cmodal__box" role="dialog" aria-modal="true" aria-labelledby="cmodal-title">
-      <button class="cmodal__x" type="button" data-cmodal-close aria-label="Fechar">
+      <button class="cmodal__x" type="button" data-cmodal-close aria-label="Fechar" data-i18n-attr="aria-label:modal.close">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="m6 6 12 12M18 6 6 18"/></svg>
       </button>
-      <h2 id="cmodal-title" class="cmodal__title">Falar connosco</h2>
-      <p class="cmodal__sub">Escolhe a forma mais fácil para ti.</p>
+      <h2 id="cmodal-title" class="cmodal__title" data-i18n="modal.title">Falar connosco</h2>
+      <p class="cmodal__sub" data-i18n="modal.sub">Escolhe a forma mais fácil para ti.</p>
       <div class="cmodal__options">
         <a class="cmodal__opt" href="https://wa.me/351965262788" target="_blank" rel="noopener">
           <span class="cmodal__icon" aria-hidden="true">
@@ -420,13 +430,13 @@
           <span class="cmodal__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
           </span>
-          <span class="cmodal__txt"><strong>Marcar reunião</strong><small>30 min · Calendly</small></span>
+          <span class="cmodal__txt"><strong data-i18n="modal.marcar">Marcar reunião</strong><small>30 min · Calendly</small></span>
         </a>
         <a class="cmodal__opt" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=nexxacreative.web@gmail.com" target="_blank" rel="noopener">
           <span class="cmodal__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
           </span>
-          <span class="cmodal__txt"><strong>Email</strong><small>nexxacreative.web@gmail.com</small></span>
+          <span class="cmodal__txt"><strong data-i18n="modal.email">Email</strong><small>nexxacreative.web@gmail.com</small></span>
         </a>
       </div>
     </div>
@@ -434,10 +444,10 @@
 
   <!-- ================= Cookie bar ================= -->
   <div class="cookie" data-cookie hidden>
-    <p>Usamos cookies para melhorar a sua experiência. <a href="#">Política de cookies</a>.</p>
+    <p data-i18n-html="cookie.text">Usamos cookies para melhorar a sua experiência. <a href="#">Política de cookies</a>.</p>
     <div class="cookie__actions">
-      <button type="button" data-cookie-reject>Rejeitar tudo</button>
-      <button type="button" data-cookie-accept class="is-primary">Aceitar tudo</button>
+      <button type="button" data-cookie-reject data-i18n="cookie.reject">Rejeitar tudo</button>
+      <button type="button" data-cookie-accept class="is-primary" data-i18n="cookie.accept">Aceitar tudo</button>
     </div>
   </div>
 
