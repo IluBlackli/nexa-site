@@ -21,7 +21,7 @@
     while (track.scrollWidth < vw && guard < 40) { track.innerHTML += base; guard++; }
     var halfWidth = track.scrollWidth;
     track.innerHTML += track.innerHTML;          // duplica -> translateX(-50%) sem salto
-    track.style.animationDuration = Math.max(16, Math.round(halfWidth / 55)) + 's'; // ~55 px/s
+    track.style.animationDuration = Math.max(30, Math.round(halfWidth / 28)) + 's'; // ~28 px/s (lento)
   });
 
   /* ---------- Header: fixo; só marca sombra ao rolar ---------- */

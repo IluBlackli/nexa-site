@@ -159,7 +159,7 @@ body.has-cursor .swatch { cursor: none; }
   align-items: center;
   white-space: nowrap;
   will-change: transform;
-  animation: marquee 40s linear infinite;
+  animation: marquee 70s linear infinite;
 }
 .marquee-top:hover .marquee-top__track { animation-play-state: paused; }
 .marquee-top__item {
@@ -211,10 +211,13 @@ body.has-cursor .swatch { cursor: none; }
   align-items: center;
   font-size: 1rem;
   font-weight: 500;
-  color: var(--yellow);
+  color: var(--cream);
   transition: color .2s var(--ease);
 }
-.nav__link:hover { color: #fff; }
+.nav__link:hover { color: var(--yellow); }
+/* ao rolar (header com sombra) as letras ficam amarelas */
+.site-header.is-scrolled .nav__link { color: var(--yellow); }
+.site-header.is-scrolled .nav__link:hover { color: #fff; }
 .nav__link .caret { width: 12px; height: 12px; margin-left: 5px; transition: transform .25s var(--ease); }
 .nav__link[aria-expanded="true"] .caret { transform: rotate(180deg); }
 .pillnew {
@@ -251,7 +254,7 @@ body.has-cursor .swatch { cursor: none; }
 }
 .search input::placeholder { color: rgba(251, 246, 233, .5); }
 
-.header-actions { display: flex; align-items: center; gap: 16px; margin-left: auto; }
+.header-actions { display: flex; align-items: center; gap: 16px; }
 .link-plain { font-size: 1rem; font-weight: 500; color: var(--ink); transition: opacity .2s var(--ease); }
 .link-plain:hover { opacity: .55; }
 
