@@ -398,6 +398,121 @@
     });
   }
 
+  /* ---------- Pesquisa no site ---------- */
+  var searchForm = $('.search');
+  var searchInput = searchForm && searchForm.querySelector('input');
+  if (searchForm && searchInput) {
+    var norm = function (s) {
+      return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+    };
+    var noResults = function () {
+      var l = document.documentElement.lang || 'pt';
+      return l.indexOf('es') === 0 ? 'Sin resultados' : l.indexOf('en') === 0 ? 'No results' : 'Sem resultados';
+    };
+    var panel = document.createElement('div');
+    panel.className = 'search-results';
+    panel.hidden = true;
+    searchForm.appendChild(panel);
+
+    var buildIndex = function () {
+      var idx = [];
+      var add = function (title, extra, action) {
+        idx.push({ title: title, hay: norm(title + ' ' + (extra || '')), snippet: (extra || '').replace(/\s+/g, ' ').trim(), action: action });
+      };
+      $$('main > section[id]').forEach(function (sec) {
+        var label = sec.querySelector('.block__label');
+        var sub = sec.querySelector('.block__title');
+        if (label) add(label.textContent.trim(), sub ? sub.textContent.trim() : '', function () { smoothTo('#' + sec.id); });
+      });
+      $$('#servicos .card, #trabalhos .card').forEach(function (c) {
+        var t = c.querySelector('.card__title');
+        var d = c.querySelector('.card__desc');
+        var sec = c.closest('section[id]');
+        if (t) add(t.textContent.trim(), d ? d.textContent.trim() : '', function () { smoothTo('#' + sec.id); });
+      });
+      $$('#faq .faq__item').forEach(function (it) {
+        var q = it.querySelector('.faq__q span[data-i18n]') || it.querySelector('.faq__q');
+        var a = it.querySelector('.faq__a');
+        if (q) add(q.textContent.trim(), a ? a.textContent.trim() : '', function () {
+          smoothTo('#faq');
+          it.open = true;
+        });
+      });
+      $$('#sobre .about__block').forEach(function (b) {
+        var h = b.querySelector('h3');
+        add(h ? h.textContent.trim() : 'Sobre', b.textContent.trim(), function () { smoothTo('#sobre'); });
+      });
+      var contactLbl = ($('[data-i18n="nav.contacto"]') || {}).textContent || 'Contacto';
+      add(contactLbl, 'email whatsapp telefone reuniao reunion meeting calendly nexxacreative.web@gmail.com 965 262 788', function () {
+        var t = $('[data-contact]');
+        if (t) t.click();
+      });
+      add(($('[data-i18n="foot.legal.terms"]') || {}).textContent || 'Termos legais',
+        'privacidade privacidad privacy cookies rgpd gdpr termos terms legal', function () {
+          window.location.href = 'legal.html';
+        });
+      return idx;
+    };
+
+    var results = [], activeIdx = -1;
+    var render = function () {
+      var nq = norm(searchInput.value).trim();
+      panel.innerHTML = '';
+      activeIdx = -1;
+      if (nq.length < 2) { panel.hidden = true; return; }
+      var terms = nq.split(/\s+/);
+      results = buildIndex().filter(function (e) {
+        return terms.every(function (t) { return e.hay.indexOf(t) > -1; });
+      }).slice(0, 8);
+      if (!results.length) {
+        panel.innerHTML = '<div class="search-results__empty">' + noResults() + '</div>';
+        panel.hidden = false;
+        return;
+      }
+      results.forEach(function (r, i) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'search-results__item';
+        var t = document.createElement('span'); t.className = 'search-results__t'; t.textContent = r.title;
+        b.appendChild(t);
+        var snip = r.snippet.replace(r.title, '').replace(/^[\s·—-]+/, '').trim();
+        if (snip) {
+          var s = document.createElement('span'); s.className = 'search-results__s'; s.textContent = snip;
+          b.appendChild(s);
+        }
+        b.addEventListener('click', function () { go(i); });
+        b.addEventListener('mousemove', function () { setActive(i); });
+        panel.appendChild(b);
+      });
+      panel.hidden = false;
+    };
+    var go = function (i) {
+      var r = results[i]; if (!r) return;
+      panel.hidden = true;
+      searchInput.blur();
+      r.action();
+    };
+    var setActive = function (n) {
+      var items = panel.querySelectorAll('.search-results__item');
+      if (!items.length) return;
+      activeIdx = (n + items.length) % items.length;
+      items.forEach(function (it, i) { it.classList.toggle('is-active', i === activeIdx); });
+      items[activeIdx].scrollIntoView({ block: 'nearest' });
+    };
+    searchInput.addEventListener('input', render);
+    searchInput.addEventListener('focus', function () { if (norm(searchInput.value).trim().length >= 2) render(); });
+    searchInput.addEventListener('keydown', function (ev) {
+      if (panel.hidden) return;
+      if (ev.key === 'ArrowDown') { ev.preventDefault(); setActive(activeIdx + 1); }
+      else if (ev.key === 'ArrowUp') { ev.preventDefault(); setActive(activeIdx - 1); }
+      else if (ev.key === 'Enter') { ev.preventDefault(); go(activeIdx > -1 ? activeIdx : 0); }
+      else if (ev.key === 'Escape') { panel.hidden = true; searchInput.blur(); }
+    });
+    document.addEventListener('click', function (ev) {
+      if (!searchForm.contains(ev.target)) panel.hidden = true;
+    });
+  }
+
   /* ---------- Cookie bar ---------- */
   var cookie = $('[data-cookie]');
   if (cookie) {
