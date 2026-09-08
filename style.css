@@ -713,6 +713,19 @@ body.nav-open .mobile-nav { opacity: 1; transform: none; pointer-events: auto; }
 
 /* Ilustrações dos serviços */
 #servicos .card__media { background: linear-gradient(155deg, #0a3260, #001229); }
+
+/* Miniatura de site (Trabalhos) */
+#trabalhos .card__media { background: linear-gradient(155deg, #0a3260, #001229); }
+.card__shot {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform .6s var(--ease);
+}
+.card:hover .card__shot { transform: scale(1.04); }
 .card__art {
   position: absolute;
   inset: 0;
