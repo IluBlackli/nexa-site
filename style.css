@@ -174,7 +174,8 @@ sub { vertical-align: baseline; }
   transition: color .2s var(--ease);
 }
 .faq__q::-webkit-details-marker { display: none; }
-.faq__q:hover { color: var(--sub); }
+.faq__q:hover { color: var(--yellow); }
+.faq__q:hover .faq__icon { color: var(--yellow); }
 .faq__icon {
   position: relative;
   flex: none;
@@ -182,6 +183,7 @@ sub { vertical-align: baseline; }
   height: 16px;
   margin-top: 4px;
   color: var(--muted);
+  transition: color .2s var(--ease);
 }
 .faq__icon::before,
 .faq__icon::after {
