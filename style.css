@@ -376,81 +376,68 @@ body.nav-open .mobile-nav { opacity: 1; transform: none; pointer-events: auto; }
 .heading-1 {
   font-weight: 600;
   line-height: 1;
-  text-transform: lowercase;
   letter-spacing: -.03em;
   font-size: clamp(2.5rem, 9vw, 8rem);
 }
 
 .heading-1 a { display: block; }
 
-/* ---------- Hero: logótipo animado ---------- */
+/* ---------- Hero: palavra NEXA animada ---------- */
 .hero-logo {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  gap: .12em;
+  display: inline-block;
+  text-transform: uppercase;
 }
-.hero-logo__mark-wrap {
+.hero-logo__word {
   position: relative;
-  display: block;
-  animation: heroMarkIn 1s cubic-bezier(.16, 1, .3, 1) both;
+  display: inline-block;
+  white-space: nowrap;
+  font-size: clamp(3.6rem, 18vw, 13rem);
+  font-weight: 700;
+  letter-spacing: -.02em;
+  line-height: 1;
+  color: var(--ink);
+  animation: heroWordFloat 7s ease-in-out 1.8s infinite;
 }
-.hero-logo__mark {
-  display: block;
-  width: auto;
-  height: clamp(84px, 16vw, 176px);
-  animation: heroMarkFloat 6s ease-in-out 1.1s infinite;
+/* camada 1 — letras entram em stagger */
+.hero-logo__letters span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(.5em) rotate(4deg);
+  animation: heroLetterIn .66s cubic-bezier(.18, 1, .25, 1) both;
 }
-/* brilho que percorre só a forma do "N" */
+.hero-logo__letters span:nth-child(1) { animation-delay: .12s; }
+.hero-logo__letters span:nth-child(2) { animation-delay: .24s; }
+.hero-logo__letters span:nth-child(3) { animation-delay: .36s; }
+.hero-logo__letters span:nth-child(4) { animation-delay: .48s; }
+/* camada 2 — brilho que percorre as letras */
 .hero-logo__sheen {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(115deg, transparent 44%, rgba(255, 255, 255, .55) 50%, transparent 56%);
-  -webkit-mask: url("imagens/nexa-n.png") center / contain no-repeat;
-          mask: url("imagens/nexa-n.png") center / contain no-repeat;
-  transform: translateX(-135%);
-  animation: heroSheen 5.5s ease-in-out 1.6s infinite;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(105deg, transparent 44%, rgba(255, 255, 255, .92) 50%, transparent 56%);
+  background-size: 260% 100%;
+  background-position: 130% 0;
+  -webkit-background-clip: text;
+          background-clip: text;
+  animation: heroSheen 6s ease-in-out 2s infinite;
 }
-.hero-logo__word {
-  display: inline-flex;
-  font-size: clamp(2.4rem, 7vw, 5rem);
-  font-weight: 600;
-  letter-spacing: -.04em;
-  line-height: 1;
-  color: var(--ink);
-}
-.hero-logo__word span {
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(.55em);
-  animation: heroLetterIn .6s cubic-bezier(.16, 1, .3, 1) both;
-}
-.hero-logo__word span:nth-child(1) { animation-delay: .85s; }
-.hero-logo__word span:nth-child(2) { animation-delay: .95s; }
-.hero-logo__word span:nth-child(3) { animation-delay: 1.05s; }
-.hero-logo__word span:nth-child(4) { animation-delay: 1.15s; }
 
-@keyframes heroMarkIn {
-  0%   { opacity: 0; transform: translateY(26px) scale(.82) rotate(-9deg); }
-  60%  { opacity: 1; }
-  100% { opacity: 1; transform: translateY(0) scale(1) rotate(0); }
-}
-@keyframes heroMarkFloat {
-  0%, 100% { transform: translateY(0) rotate(0); }
-  50%      { transform: translateY(-10px) rotate(1.6deg); }
-}
-@keyframes heroSheen {
-  0%, 12%   { transform: translateX(-135%); }
-  46%, 100% { transform: translateX(135%); }
-}
 @keyframes heroLetterIn {
   to { opacity: 1; transform: none; }
 }
+@keyframes heroSheen {
+  0%, 18%   { background-position: 130% 0; }
+  58%, 100% { background-position: -30% 0; }
+}
+@keyframes heroWordFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-7px); }
+}
 @media (prefers-reduced-motion: reduce) {
-  .hero-logo__mark-wrap,
-  .hero-logo__mark,
-  .hero-logo__word span { animation: none !important; opacity: 1 !important; transform: none !important; }
+  .hero-logo__word { animation: none !important; }
+  .hero-logo__letters span { animation: none !important; opacity: 1 !important; transform: none !important; }
   .hero-logo__sheen { display: none; }
 }
 .hero-lead {
