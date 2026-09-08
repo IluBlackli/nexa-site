@@ -39,7 +39,7 @@
 html {
   font-size: 14px;               /* mesma base do original (1rem = 14px) */
   -webkit-text-size-adjust: 100%;
-  scroll-padding-top: 92px;
+  scroll-padding-top: 128px;      /* marquee (50) + header (64) fixos */
 }
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
@@ -141,6 +141,9 @@ body.has-cursor .swatch { cursor: none; }
    4. Marquee superior
    ------------------------------------------------------------- */
 .marquee-top {
+  position: sticky;
+  top: 0;
+  z-index: 61;
   height: var(--marquee-h);
   background: var(--mist);
   color: var(--ink);
@@ -178,11 +181,11 @@ body.has-cursor .swatch { cursor: none; }
    ------------------------------------------------------------- */
 .site-header {
   position: sticky;
-  top: 0;
+  top: var(--marquee-h);
   z-index: 60;
   background: var(--navy);
   color: var(--cream);
-  transition: transform .4s var(--ease), box-shadow .3s var(--ease);
+  transition: box-shadow .3s var(--ease);
 }
 .site-header.is-hidden { transform: translateY(-100%); }
 .site-header.is-scrolled { box-shadow: 0 1px 0 rgba(251, 246, 233, .1), 0 14px 34px -22px rgba(0, 0, 0, .55); }
@@ -290,7 +293,7 @@ body.nav-open .burger span:nth-child(2) { transform: translateY(-4px) rotate(-45
 
 .mobile-nav {
   position: fixed;
-  inset: calc(var(--header-h)) 0 0;
+  inset: calc(var(--marquee-h) + var(--header-h)) 0 0;
   background: var(--navy);
   color: var(--cream);
   padding: 32px var(--pad) 48px;

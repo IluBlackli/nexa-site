@@ -24,19 +24,12 @@
     track.style.animationDuration = Math.max(16, Math.round(halfWidth / 55)) + 's'; // ~55 px/s
   });
 
-  /* ---------- Header: esconde ao descer, mostra ao subir ---------- */
+  /* ---------- Header: fixo; só marca sombra ao rolar ---------- */
   var header = $('[data-header]');
   if (header) {
-    var lastY = window.pageYOffset;
     var ticking = false;
     var onScroll = function () {
-      var y = window.pageYOffset;
-      header.classList.toggle('is-scrolled', y > 10);
-      if (Math.abs(y - lastY) > 6) {
-        var hide = y > lastY && y > 160 && !document.body.classList.contains('nav-open');
-        header.classList.toggle('is-hidden', hide);
-        lastY = y;
-      }
+      header.classList.toggle('is-scrolled', window.pageYOffset > 10);
       ticking = false;
     };
     window.addEventListener('scroll', function () {
@@ -141,7 +134,7 @@
   function smoothTo(sel) {
     var el = sel && sel.length > 1 ? document.querySelector(sel) : null;
     if (!el) return;
-    var top = el.getBoundingClientRect().top + window.pageYOffset - 84;
+    var top = el.getBoundingClientRect().top + window.pageYOffset - 124;
     window.scrollTo({ top: top, behavior: reduce ? 'auto' : 'smooth' });
   }
   $$('[data-scroll]').forEach(function (b) {
