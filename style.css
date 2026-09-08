@@ -197,10 +197,10 @@ body.has-cursor .swatch { cursor: none; }
   align-items: center;
   font-size: 1rem;
   font-weight: 500;
-  color: var(--cream);
-  transition: opacity .2s var(--ease);
+  color: var(--yellow);
+  transition: color .2s var(--ease);
 }
-.nav__link:hover { opacity: .6; }
+.nav__link:hover { color: #fff; }
 .nav__link .caret { width: 12px; height: 12px; margin-left: 5px; transition: transform .25s var(--ease); }
 .nav__link[aria-expanded="true"] .caret { transform: rotate(180deg); }
 .pillnew {
@@ -237,7 +237,7 @@ body.has-cursor .swatch { cursor: none; }
 }
 .search input::placeholder { color: rgba(251, 246, 233, .5); }
 
-.header-actions { display: flex; align-items: center; gap: 16px; }
+.header-actions { display: flex; align-items: center; gap: 16px; margin-left: auto; }
 .link-plain { font-size: 1rem; font-weight: 500; color: var(--ink); transition: opacity .2s var(--ease); }
 .link-plain:hover { opacity: .55; }
 
@@ -298,8 +298,11 @@ body.nav-open .mobile-nav { opacity: 1; transform: none; pointer-events: auto; }
   font-size: 1.6rem;
   font-weight: 500;
   padding: 12px 0;
+  color: var(--yellow);
   border-bottom: 1px solid rgba(251, 246, 233, .14);
+  transition: color .2s var(--ease);
 }
+.mobile-nav a:not(.btn):hover { color: #fff; }
 .mobile-nav__row { display: flex; gap: 20px; padding: 18px 0 6px; }
 .mobile-nav .btn { margin-top: 10px; }
 
