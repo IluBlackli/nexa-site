@@ -1068,9 +1068,7 @@ body.nav-open .mobile-nav { opacity: 1; transform: none; pointer-events: auto; }
 .cmodal__backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(0, 15, 39, .55);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  background: rgba(0, 15, 39, .72);
   animation: cmodalFade .2s var(--ease);
 }
 .cmodal__box {
@@ -1130,6 +1128,10 @@ body.nav-open .mobile-nav { opacity: 1; transform: none; pointer-events: auto; }
 .cmodal__txt strong { font-size: 1rem; font-weight: 600; }
 .cmodal__txt small { font-size: .82rem; color: var(--sub); overflow: hidden; text-overflow: ellipsis; }
 body.cmodal-open { overflow: hidden; }
+/* pausa animações de fundo enquanto o modal está aberto */
+body.cmodal-open .marquee-top__track,
+body.cmodal-open .hero-logo__word,
+body.cmodal-open .hero-logo__sheen { animation-play-state: paused; }
 @keyframes cmodalFade { from { opacity: 0; } }
 @keyframes cmodalPop { from { opacity: 0; transform: translateY(12px) scale(.97); } }
 @media (prefers-reduced-motion: reduce) {
