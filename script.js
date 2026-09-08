@@ -58,7 +58,7 @@
       'foot.col.explorar': 'Explorar', 'foot.col.contacto': 'Contacto', 'foot.col.legal': 'Legal', 'foot.marcar': 'Marcar reunião',
       'foot.legal.cookies': 'Política de cookies', 'foot.legal.terms': 'Termos legais', 'foot.legal.privacy': 'Privacidade',
       'modal.title': 'Falar connosco', 'modal.sub': 'Escolhe a forma mais fácil para ti.', 'modal.marcar': 'Marcar reunião', 'modal.email': 'Email', 'modal.close': 'Fechar',
-      'cookie.text': 'Usamos cookies para melhorar a sua experiência. <a href="#">Política de cookies</a>.',
+      'cookie.text': 'Usamos cookies para melhorar a sua experiência. <a href="legal.html#cookies">Política de cookies</a>.',
       'cookie.reject': 'Rejeitar tudo', 'cookie.accept': 'Aceitar tudo',
       '_meta.desc': 'A nexa é um estúdio de tecnologia: sites, software à medida, inteligência artificial e automação para empresas.'
     },
@@ -106,7 +106,7 @@
       'foot.col.explorar': 'Explorar', 'foot.col.contacto': 'Contacto', 'foot.col.legal': 'Legal', 'foot.marcar': 'Agendar reunión',
       'foot.legal.cookies': 'Política de cookies', 'foot.legal.terms': 'Términos legales', 'foot.legal.privacy': 'Privacidad',
       'modal.title': 'Hablemos', 'modal.sub': 'Elige la forma más fácil para ti.', 'modal.marcar': 'Agendar reunión', 'modal.email': 'Email', 'modal.close': 'Cerrar',
-      'cookie.text': 'Usamos cookies para mejorar tu experiencia. <a href="#">Política de cookies</a>.',
+      'cookie.text': 'Usamos cookies para mejorar tu experiencia. <a href="legal.html#cookies">Política de cookies</a>.',
       'cookie.reject': 'Rechazar todo', 'cookie.accept': 'Aceptar todo',
       '_meta.desc': 'nexa es un estudio de tecnología: webs, software a medida, inteligencia artificial y automatización para empresas.'
     },
@@ -154,7 +154,7 @@
       'foot.col.explorar': 'Explore', 'foot.col.contacto': 'Contact', 'foot.col.legal': 'Legal', 'foot.marcar': 'Book a meeting',
       'foot.legal.cookies': 'Cookie policy', 'foot.legal.terms': 'Legal terms', 'foot.legal.privacy': 'Privacy',
       'modal.title': 'Get in touch', 'modal.sub': 'Pick whatever works best for you.', 'modal.marcar': 'Book a meeting', 'modal.email': 'Email', 'modal.close': 'Close',
-      'cookie.text': 'We use cookies to improve your experience. <a href="#">Cookie policy</a>.',
+      'cookie.text': 'We use cookies to improve your experience. <a href="legal.html#cookies">Cookie policy</a>.',
       'cookie.reject': 'Reject all', 'cookie.accept': 'Accept all',
       '_meta.desc': 'nexa is a technology studio: websites, custom software, artificial intelligence and automation for businesses.'
     }
