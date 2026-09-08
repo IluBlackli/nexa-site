@@ -152,6 +152,59 @@ sub { vertical-align: baseline; }
   max-width: 42ch;
 }
 
+/* CTA — espaço personalizado */
+.cta { padding-top: 20px; padding-bottom: 60px; }
+.cta__panel {
+  position: relative;
+  overflow: hidden;
+  background: var(--navy);
+  color: var(--cream);
+  border-radius: 18px;
+  padding: clamp(40px, 6vw, 76px) clamp(24px, 6vw, 76px);
+  text-align: center;
+}
+.cta__panel::after {
+  content: "";
+  position: absolute;
+  right: -80px;
+  bottom: -120px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(249, 185, 36, .28), transparent 68%);
+  pointer-events: none;
+}
+.cta__title {
+  position: relative;
+  font-size: clamp(1.65rem, 3.6vw, 2.7rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -.02em;
+  max-width: 22ch;
+  margin-inline: auto;
+}
+.cta__text {
+  position: relative;
+  margin: 18px auto 0;
+  max-width: 48ch;
+  font-size: clamp(1rem, 1.4vw, 1.1rem);
+  line-height: 1.6;
+  color: rgba(251, 246, 233, .72);
+}
+.cta__actions {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 30px;
+}
+.cta__ghost {
+  border: 1px solid rgba(251, 246, 233, .38);
+  color: var(--cream);
+}
+.cta__ghost:hover { background: rgba(251, 246, 233, .1); }
+
 /* FAQ */
 .faq {
   max-width: 780px;
