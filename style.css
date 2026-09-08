@@ -106,6 +106,45 @@ sub { vertical-align: baseline; }
   margin-top: 10px;
 }
 
+/* Sobre nós */
+.about {
+  display: grid;
+  grid-template-columns: minmax(0, 360px) 1fr;
+  gap: 48px;
+  align-items: start;
+  max-width: 980px;
+  margin-inline: auto;
+  text-align: left;
+}
+.about__photo {
+  margin: 0;
+  aspect-ratio: 4 / 5;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--line-soft);
+  border: 1px dashed rgba(0, 23, 57, .28);
+  display: grid;
+  place-items: center;
+}
+.about__photo img { width: 100%; height: 100%; object-fit: cover; }
+.about__photo-ph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  font-size: .9rem;
+}
+.about__photo-ph svg { width: 34px; height: 34px; }
+.about__text { display: flex; flex-direction: column; gap: 32px; }
+.about__block h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: 8px; }
+.about__block p { font-size: 1rem; line-height: 1.65; color: var(--sub); max-width: 58ch; }
+
+@media (max-width: 760px) {
+  .about { grid-template-columns: 1fr; gap: 28px; }
+  .about__photo { max-width: 280px; }
+}
+
 /* Reveal on scroll */
 .reveal {
   opacity: 0;
