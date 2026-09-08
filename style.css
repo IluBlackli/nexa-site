@@ -139,7 +139,18 @@ sub { vertical-align: baseline; }
 .about__text { display: flex; flex-direction: column; gap: 32px; }
 .about__block h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: 8px; }
 .about__block p { font-size: 1rem; line-height: 1.65; color: var(--sub); max-width: 58ch; }
+.about__block p + p { margin-top: 14px; }
 .about__block .brand-em { color: var(--ink); font-weight: 600; letter-spacing: .01em; }
+.about__block p.about__highlight {
+  margin-top: 26px;
+  padding-left: 18px;
+  border-left: 3px solid var(--yellow);
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--ink);
+  max-width: 42ch;
+}
 
 /* FAQ */
 .faq {
