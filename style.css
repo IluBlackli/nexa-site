@@ -326,7 +326,7 @@ body.nav-open .mobile-nav { opacity: 1; transform: none; pointer-events: auto; }
 /* -------------------------------------------------------------
    6. Hero
    ------------------------------------------------------------- */
-.hero { padding-top: 32px; }
+.hero { padding-top: 56px; }
 
 .hero__bar {
   display: flex;
@@ -384,19 +384,24 @@ body.nav-open .mobile-nav { opacity: 1; transform: none; pointer-events: auto; }
   height: clamp(96px, 21vw, 232px);
   margin-inline: auto;
 }
-.author {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 28px;
+.hero-lead {
+  margin: 30px auto 0;
+  max-width: 30ch;
+  font-size: clamp(1.15rem, 2.2vw, 1.5rem);
   font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -.01em;
+  color: var(--ink);
 }
-.author .avatar {
-  width: 28px; height: 28px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent), var(--coal));
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 34px;
 }
-.author a { border-bottom: 1px solid currentColor; padding-bottom: 2px; }
+.hero .btn--ghost { border-color: var(--navy); color: var(--navy); }
+.hero .btn--ghost:hover { background: var(--navy); color: var(--cream); }
 
 /* -------------------------------------------------------------
    7. Box figure (preview) + menu flutuante
@@ -538,6 +543,15 @@ body.nav-open .mobile-nav { opacity: 1; transform: none; pointer-events: auto; }
 .card__title a:hover { opacity: .55; }
 .card__from { font-size: .9rem; color: var(--sub); }
 .card__from a { border-bottom: 1px solid var(--line); }
+.card__desc { font-size: .92rem; line-height: 1.45; color: var(--sub); }
+.card__num {
+  position: absolute;
+  left: 14px; top: 12px;
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  color: rgba(251, 246, 233, .92);
+}
 
 /* placeholders visuais (paleta nexa: marinho / amarelo / creme) */
 .ph { background: var(--line); }

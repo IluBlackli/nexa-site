@@ -77,10 +77,7 @@
       </a>
 
       <nav class="nav" aria-label="Principal">
-        <button class="nav__link" type="button" data-dropdown aria-expanded="false">
-          Serviços
-          <svg class="caret" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path stroke="currentColor" stroke-width="2" d="m6 9 6 6 6-6"/></svg>
-        </button>
+        <a class="nav__link" href="#servicos" data-scroll="#servicos">Serviços</a>
         <a class="nav__link" href="#">Trabalhos</a>
         <a class="nav__link" href="#">Estúdio</a>
         <a class="nav__link" href="#">Blog</a>
@@ -104,7 +101,7 @@
 
     <!-- Menu mobile -->
     <div class="mobile-nav" data-mobilenav>
-      <a href="#">Serviços</a>
+      <a href="#servicos" data-scroll="#servicos">Serviços</a>
       <a href="#">Trabalhos</a>
       <a href="#">Estúdio</a>
       <a href="#">Blog</a>
@@ -119,34 +116,14 @@
 
     <!-- ---------- Hero ---------- -->
     <section class="shell hero">
-      <div class="hero__bar">
-        <div class="box-score" data-cursor>
-          <div class="box-score__top"><strong>EST.</strong></div>
-          <div class="box-score__bottom">
-            <strong>2020</strong>
-          </div>
-        </div>
-
-        <div class="hero__actions">
-          <button class="iconbtn" type="button" aria-label="Guardar">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M6 3h12v18l-6-4-6 4z"/></svg>
-          </button>
-          <button class="iconbtn" type="button" aria-label="Partilhar">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="18" cy="5" r="3" stroke="currentColor" stroke-width="2"/><circle cx="6" cy="12" r="3" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="19" r="3" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" d="m8.6 10.6 6.8-4.2M8.6 13.4l6.8 4.2"/></svg>
-          </button>
-          <a class="iconbtn" href="#" aria-label="Visitar site">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path stroke="currentColor" stroke-width="2" d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
-          </a>
-        </div>
-      </div>
-
       <div class="c-heading reveal">
-        <p class="eyebrow">Estúdio de design e desenvolvimento web</p>
-        <h1 class="heading-1"><a href="#" aria-label="nexa"><img class="heading-1__mark" src="imagens/nexa-n.png" alt="nexa"></a></h1>
-        <p class="author">
-          <span class="avatar" aria-hidden="true"></span>
-          <a href="#">Sites · Marcas · Produtos digitais</a>
-        </p>
+        <p class="eyebrow">Estúdio digital · desde 2020</p>
+        <h1 class="heading-1"><a href="#top" aria-label="nexa"><img class="heading-1__mark" src="imagens/nexa-n.png" alt="nexa"></a></h1>
+        <p class="hero-lead">Sites, IA, automação e software feitos à medida.</p>
+        <div class="hero-cta">
+          <a href="#" class="btn btn--solid">Falar connosco</a>
+          <a href="#servicos" class="btn btn--ghost" data-scroll="#servicos">Ver serviços</a>
+        </div>
       </div>
     </section>
 
@@ -169,7 +146,7 @@
             <span class="menu-float__brand" aria-hidden="true">
               <img src="imagens/nexa-mark.png" alt="" width="22" height="22">
             </span>
-            <button type="button" data-scroll="#elements">Elementos</button>
+            <button type="button" data-scroll="#servicos">Serviços</button>
             <button type="button" data-scroll="#tech">Detalhes</button>
             <a class="visit" href="#" data-cursor>Visitar site</a>
           </div>
@@ -177,52 +154,48 @@
       </div>
     </section>
 
-    <!-- ---------- Elementos ---------- -->
-    <section id="elements" class="block">
+    <!-- ---------- Serviços ---------- -->
+    <section id="servicos" class="block">
       <div class="block__head reveal">
-        <h2 class="block__label">Elementos</h2>
-        <p class="block__title">Os destaques deste site.</p>
+        <h2 class="block__label">Serviços</h2>
+        <p class="block__title">O que a nexa faz.</p>
       </div>
       <ul class="grid-cards grid-cards--4">
         <li class="card reveal" style="--i:0">
           <a class="card__media" href="#" data-cursor>
             <span class="ph ph--v1"></span>
-            <span class="card__play" aria-hidden="true">▶</span>
-            <span class="card__badge">vídeo</span>
+            <span class="card__num" aria-hidden="true">01</span>
           </a>
-          <p class="card__tag">Elemento</p>
-          <h3 class="card__title"><a href="#">nexa · página inicial</a></h3>
-          <p class="card__from">de <a href="#">Cabeçalho</a></p>
+          <p class="card__tag">Serviço</p>
+          <h3 class="card__title"><a href="#">Sites &amp; Web</a></h3>
+          <p class="card__desc">Websites, lojas online e landing pages — design e desenvolvimento à medida, rápidos e fáceis de gerir.</p>
         </li>
         <li class="card reveal" style="--i:1">
           <a class="card__media" href="#" data-cursor>
             <span class="ph ph--v2"></span>
-            <span class="card__play" aria-hidden="true">▶</span>
-            <span class="card__badge">vídeo</span>
+            <span class="card__num" aria-hidden="true">02</span>
           </a>
-          <p class="card__tag">Elemento</p>
-          <h3 class="card__title"><a href="#">nexa · navegação</a></h3>
-          <p class="card__from">de <a href="#">Menu</a></p>
+          <p class="card__tag">Serviço</p>
+          <h3 class="card__title"><a href="#">IA</a></h3>
+          <p class="card__desc">Chatbots, assistentes e integrações com modelos de IA aplicados aos produtos e ao atendimento.</p>
         </li>
         <li class="card reveal" style="--i:2">
           <a class="card__media" href="#" data-cursor>
             <span class="ph ph--v3"></span>
-            <span class="card__play" aria-hidden="true">▶</span>
-            <span class="card__badge">vídeo</span>
+            <span class="card__num" aria-hidden="true">03</span>
           </a>
-          <p class="card__tag">Elemento</p>
-          <h3 class="card__title"><a href="#">nexa · animações</a></h3>
-          <p class="card__from">de <a href="#">Animação</a></p>
+          <p class="card__tag">Serviço</p>
+          <h3 class="card__title"><a href="#">Automação</a></h3>
+          <p class="card__desc">Automação de tarefas e fluxos de trabalho, integrações entre ferramentas — menos trabalho manual, menos erros.</p>
         </li>
         <li class="card reveal" style="--i:3">
           <a class="card__media" href="#" data-cursor>
             <span class="ph ph--v4"></span>
-            <span class="card__play" aria-hidden="true">▶</span>
-            <span class="card__badge">vídeo</span>
+            <span class="card__num" aria-hidden="true">04</span>
           </a>
-          <p class="card__tag">Elemento</p>
-          <h3 class="card__title"><a href="#">nexa · interações</a></h3>
-          <p class="card__from">de <a href="#">Interação</a></p>
+          <p class="card__tag">Serviço</p>
+          <h3 class="card__title"><a href="#">Software</a></h3>
+          <p class="card__desc">Aplicações web, plataformas e dashboards feitos de raiz, à medida de cada negócio.</p>
         </li>
       </ul>
     </section>
