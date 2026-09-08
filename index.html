@@ -106,6 +106,10 @@
 
     <!-- Menu mobile -->
     <div class="mobile-nav" data-mobilenav>
+      <form class="search search--mobile" role="search" onsubmit="return false">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" d="m20 20-3.5-3.5"/></svg>
+        <input type="text" placeholder="Pesquisar" aria-label="Pesquisar" data-i18n-attr="placeholder:search.ph,aria-label:search.ph">
+      </form>
       <a href="#sobre" data-scroll="#sobre" data-i18n="nav.sobre">Sobre</a>
       <a href="#servicos" data-scroll="#servicos" data-i18n="nav.servicos">Serviços</a>
       <a href="#trabalhos" data-scroll="#trabalhos" data-i18n="nav.trabalhos">Trabalhos</a>
@@ -396,9 +400,9 @@
         <div>
           <h4 data-i18n="foot.col.legal">Legal</h4>
           <ul>
-            <li><a href="legal.html#cookies" data-i18n="foot.legal.cookies">Política de cookies</a></li>
-            <li><a href="legal.html" data-i18n="foot.legal.terms">Termos legais</a></li>
-            <li><a href="legal.html#privacidade" data-i18n="foot.legal.privacy">Privacidade</a></li>
+            <li><a href="termos-legais.pdf" target="_blank" rel="noopener" data-i18n="foot.legal.cookies">Política de cookies</a></li>
+            <li><a href="termos-legais.pdf" target="_blank" rel="noopener" data-i18n="foot.legal.terms">Termos legais</a></li>
+            <li><a href="termos-legais.pdf" target="_blank" rel="noopener" data-i18n="foot.legal.privacy">Privacidade</a></li>
           </ul>
         </div>
       </nav>
@@ -462,7 +466,7 @@
 
   <!-- ================= Cookie bar ================= -->
   <div class="cookie" data-cookie hidden>
-    <p data-i18n-html="cookie.text">Usamos cookies para melhorar a sua experiência. <a href="#">Política de cookies</a>.</p>
+    <p data-i18n-html="cookie.text">Usamos cookies para melhorar a sua experiência. <a href="termos-legais.pdf" target="_blank" rel="noopener">Política de cookies</a>.</p>
     <div class="cookie__actions">
       <button type="button" data-cookie-reject data-i18n="cookie.reject">Rejeitar tudo</button>
       <button type="button" data-cookie-accept class="is-primary" data-i18n="cookie.accept">Aceitar tudo</button>

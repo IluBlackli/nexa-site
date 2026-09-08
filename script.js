@@ -58,7 +58,7 @@
       'foot.col.explorar': 'Explorar', 'foot.col.contacto': 'Contacto', 'foot.col.legal': 'Legal', 'foot.marcar': 'Marcar reunião',
       'foot.legal.cookies': 'Política de cookies', 'foot.legal.terms': 'Termos legais', 'foot.legal.privacy': 'Privacidade',
       'modal.title': 'Falar connosco', 'modal.sub': 'Escolhe a forma mais fácil para ti.', 'modal.marcar': 'Marcar reunião', 'modal.email': 'Email', 'modal.close': 'Fechar', 'modal.follow': 'Segue-nos',
-      'cookie.text': 'Usamos cookies para melhorar a sua experiência. <a href="legal.html#cookies">Política de cookies</a>.',
+      'cookie.text': 'Usamos cookies para melhorar a sua experiência. <a href="termos-legais.pdf" target="_blank" rel="noopener">Política de cookies</a>.',
       'cookie.reject': 'Rejeitar tudo', 'cookie.accept': 'Aceitar tudo',
       '_meta.desc': 'A nexa é um estúdio de tecnologia: sites, software à medida, inteligência artificial e automação para empresas.'
     },
@@ -106,7 +106,7 @@
       'foot.col.explorar': 'Explorar', 'foot.col.contacto': 'Contacto', 'foot.col.legal': 'Legal', 'foot.marcar': 'Agendar reunión',
       'foot.legal.cookies': 'Política de cookies', 'foot.legal.terms': 'Términos legales', 'foot.legal.privacy': 'Privacidad',
       'modal.title': 'Hablemos', 'modal.sub': 'Elige la forma más fácil para ti.', 'modal.marcar': 'Agendar reunión', 'modal.email': 'Email', 'modal.close': 'Cerrar', 'modal.follow': 'Síguenos',
-      'cookie.text': 'Usamos cookies para mejorar tu experiencia. <a href="legal.html#cookies">Política de cookies</a>.',
+      'cookie.text': 'Usamos cookies para mejorar tu experiencia. <a href="termos-legais.pdf" target="_blank" rel="noopener">Política de cookies</a>.',
       'cookie.reject': 'Rechazar todo', 'cookie.accept': 'Aceptar todo',
       '_meta.desc': 'nexa es un estudio de tecnología: webs, software a medida, inteligencia artificial y automatización para empresas.'
     },
@@ -154,7 +154,7 @@
       'foot.col.explorar': 'Explore', 'foot.col.contacto': 'Contact', 'foot.col.legal': 'Legal', 'foot.marcar': 'Book a meeting',
       'foot.legal.cookies': 'Cookie policy', 'foot.legal.terms': 'Legal terms', 'foot.legal.privacy': 'Privacy',
       'modal.title': 'Get in touch', 'modal.sub': 'Pick whatever works best for you.', 'modal.marcar': 'Book a meeting', 'modal.email': 'Email', 'modal.close': 'Close', 'modal.follow': 'Follow us',
-      'cookie.text': 'We use cookies to improve your experience. <a href="legal.html#cookies">Cookie policy</a>.',
+      'cookie.text': 'We use cookies to improve your experience. <a href="termos-legais.pdf" target="_blank" rel="noopener">Cookie policy</a>.',
       'cookie.reject': 'Reject all', 'cookie.accept': 'Accept all',
       '_meta.desc': 'nexa is a technology studio: websites, custom software, artificial intelligence and automation for businesses.'
     }
@@ -398,10 +398,9 @@
     });
   }
 
-  /* ---------- Pesquisa no site ---------- */
-  var searchForm = $('.search');
-  var searchInput = searchForm && searchForm.querySelector('input');
-  if (searchForm && searchInput) {
+  /* ---------- Pesquisa no site (cabeçalho + menu mobile) ---------- */
+  var searchForms = $$('.search');
+  if (searchForms.length) {
     var norm = function (s) {
       return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
     };
@@ -409,10 +408,6 @@
       var l = document.documentElement.lang || 'pt';
       return l.indexOf('es') === 0 ? 'Sin resultados' : l.indexOf('en') === 0 ? 'No results' : 'Sem resultados';
     };
-    var panel = document.createElement('div');
-    panel.className = 'search-results';
-    panel.hidden = true;
-    searchForm.appendChild(panel);
 
     var buildIndex = function () {
       var idx = [];
@@ -448,68 +443,80 @@
         if (t) t.click();
       });
       add(($('[data-i18n="foot.legal.terms"]') || {}).textContent || 'Termos legais',
-        'privacidade privacidad privacy cookies rgpd gdpr termos terms legal', function () {
-          window.location.href = 'legal.html';
+        'privacidade privacidad privacy cookies rgpd gdpr termos terms legal pdf documento', function () {
+          window.open('termos-legais.pdf', '_blank', 'noopener');
         });
       return idx;
     };
 
-    var results = [], activeIdx = -1;
-    var render = function () {
-      var nq = norm(searchInput.value).trim();
-      panel.innerHTML = '';
-      activeIdx = -1;
-      if (nq.length < 2) { panel.hidden = true; return; }
-      var terms = nq.split(/\s+/);
-      results = buildIndex().filter(function (e) {
-        return terms.every(function (t) { return e.hay.indexOf(t) > -1; });
-      }).slice(0, 8);
-      if (!results.length) {
-        panel.innerHTML = '<div class="search-results__empty">' + noResults() + '</div>';
-        panel.hidden = false;
-        return;
-      }
-      results.forEach(function (r, i) {
-        var b = document.createElement('button');
-        b.type = 'button';
-        b.className = 'search-results__item';
-        var t = document.createElement('span'); t.className = 'search-results__t'; t.textContent = r.title;
-        b.appendChild(t);
-        var snip = r.snippet.replace(r.title, '').replace(/^[\s·—-]+/, '').trim();
-        if (snip) {
-          var s = document.createElement('span'); s.className = 'search-results__s'; s.textContent = snip;
-          b.appendChild(s);
-        }
-        b.addEventListener('click', function () { go(i); });
-        b.addEventListener('mousemove', function () { setActive(i); });
-        panel.appendChild(b);
-      });
-      panel.hidden = false;
-    };
-    var go = function (i) {
-      var r = results[i]; if (!r) return;
+    searchForms.forEach(function (searchForm) {
+      var searchInput = searchForm.querySelector('input');
+      if (!searchInput) return;
+      var panel = document.createElement('div');
+      panel.className = 'search-results';
       panel.hidden = true;
-      searchInput.blur();
-      r.action();
-    };
-    var setActive = function (n) {
-      var items = panel.querySelectorAll('.search-results__item');
-      if (!items.length) return;
-      activeIdx = (n + items.length) % items.length;
-      items.forEach(function (it, i) { it.classList.toggle('is-active', i === activeIdx); });
-      items[activeIdx].scrollIntoView({ block: 'nearest' });
-    };
-    searchInput.addEventListener('input', render);
-    searchInput.addEventListener('focus', function () { if (norm(searchInput.value).trim().length >= 2) render(); });
-    searchInput.addEventListener('keydown', function (ev) {
-      if (panel.hidden) return;
-      if (ev.key === 'ArrowDown') { ev.preventDefault(); setActive(activeIdx + 1); }
-      else if (ev.key === 'ArrowUp') { ev.preventDefault(); setActive(activeIdx - 1); }
-      else if (ev.key === 'Enter') { ev.preventDefault(); go(activeIdx > -1 ? activeIdx : 0); }
-      else if (ev.key === 'Escape') { panel.hidden = true; searchInput.blur(); }
-    });
-    document.addEventListener('click', function (ev) {
-      if (!searchForm.contains(ev.target)) panel.hidden = true;
+      searchForm.appendChild(panel);
+
+      var results = [], activeIdx = -1;
+      var render = function () {
+        var nq = norm(searchInput.value).trim();
+        panel.innerHTML = '';
+        activeIdx = -1;
+        if (nq.length < 2) { panel.hidden = true; return; }
+        var terms = nq.split(/\s+/);
+        results = buildIndex().filter(function (e) {
+          return terms.every(function (t) { return e.hay.indexOf(t) > -1; });
+        }).slice(0, 8);
+        if (!results.length) {
+          panel.innerHTML = '<div class="search-results__empty">' + noResults() + '</div>';
+          panel.hidden = false;
+          return;
+        }
+        results.forEach(function (r, i) {
+          var b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'search-results__item';
+          var t = document.createElement('span'); t.className = 'search-results__t'; t.textContent = r.title;
+          b.appendChild(t);
+          var snip = r.snippet.replace(r.title, '').replace(/^[\s·—-]+/, '').trim();
+          if (snip) {
+            var s = document.createElement('span'); s.className = 'search-results__s'; s.textContent = snip;
+            b.appendChild(s);
+          }
+          b.addEventListener('click', function () { go(i); });
+          b.addEventListener('mousemove', function () { setActive(i); });
+          panel.appendChild(b);
+        });
+        panel.hidden = false;
+      };
+      var go = function (i) {
+        var r = results[i]; if (!r) return;
+        panel.hidden = true;
+        searchInput.blur();
+        document.body.classList.remove('nav-open');
+        var bg = $('[data-burger]');
+        if (bg) bg.setAttribute('aria-expanded', 'false');
+        r.action();
+      };
+      var setActive = function (n) {
+        var items = panel.querySelectorAll('.search-results__item');
+        if (!items.length) return;
+        activeIdx = (n + items.length) % items.length;
+        items.forEach(function (it, i) { it.classList.toggle('is-active', i === activeIdx); });
+        items[activeIdx].scrollIntoView({ block: 'nearest' });
+      };
+      searchInput.addEventListener('input', render);
+      searchInput.addEventListener('focus', function () { if (norm(searchInput.value).trim().length >= 2) render(); });
+      searchInput.addEventListener('keydown', function (ev) {
+        if (panel.hidden) return;
+        if (ev.key === 'ArrowDown') { ev.preventDefault(); setActive(activeIdx + 1); }
+        else if (ev.key === 'ArrowUp') { ev.preventDefault(); setActive(activeIdx - 1); }
+        else if (ev.key === 'Enter') { ev.preventDefault(); go(activeIdx > -1 ? activeIdx : 0); }
+        else if (ev.key === 'Escape') { panel.hidden = true; searchInput.blur(); }
+      });
+      document.addEventListener('click', function (ev) {
+        if (!searchForm.contains(ev.target)) panel.hidden = true;
+      });
     });
   }
 
