@@ -12,9 +12,16 @@
   var $  = function (s, c) { return (c || document).querySelector(s); };
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
 
-  /* ---------- Marquee: duplica os itens para loop contínuo ---------- */
+  /* ---------- Marquee: preenche a linha toda + loop infinito ---------- */
   $$('[data-marquee]').forEach(function (track) {
-    track.innerHTML = track.innerHTML + track.innerHTML; // 2x -> translateX(-50%) fecha
+    var base = track.innerHTML;
+    var vw = (track.parentElement && track.parentElement.offsetWidth) || window.innerWidth;
+    var guard = 0;
+    // repete a sequência até uma "metade" cobrir a largura do ecrã
+    while (track.scrollWidth < vw && guard < 40) { track.innerHTML += base; guard++; }
+    var halfWidth = track.scrollWidth;
+    track.innerHTML += track.innerHTML;          // duplica -> translateX(-50%) sem salto
+    track.style.animationDuration = Math.max(16, Math.round(halfWidth / 55)) + 's'; // ~55 px/s
   });
 
   /* ---------- Header: esconde ao descer, mostra ao subir ---------- */

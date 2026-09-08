@@ -153,13 +153,24 @@ body.has-cursor .swatch { cursor: none; }
 .marquee-top__track {
   display: flex;
   flex: none;
+  align-items: center;
   white-space: nowrap;
   will-change: transform;
-  animation: marquee 34s linear infinite;
+  animation: marquee 40s linear infinite;
 }
 .marquee-top:hover .marquee-top__track { animation-play-state: paused; }
-.marquee-top__item { padding: 0 28px; font-size: 1rem; }
-.marquee-top__item strong { font-weight: 600; }
+.marquee-top__item {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1rem;
+}
+.marquee-top__item::before {
+  content: "•";
+  margin: 0 24px;
+  font-size: .8em;
+  opacity: .4;
+}
+.marquee-top__item strong { font-weight: 600; letter-spacing: .02em; }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
 /* -------------------------------------------------------------
