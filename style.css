@@ -657,6 +657,7 @@ body.nav-open .mobile-nav { opacity: 1; transform: none; pointer-events: auto; }
    ------------------------------------------------------------- */
 .grid-cards { display: grid; gap: 20px; }
 .grid-cards--4 { grid-template-columns: repeat(4, 1fr); }
+.grid-cards--3 { grid-template-columns: repeat(3, 1fr); }
 .grid-cards--2 { grid-template-columns: repeat(2, 1fr); }
 
 .card { display: flex; flex-direction: column; gap: 14px; }
@@ -709,6 +710,17 @@ body.nav-open .mobile-nav { opacity: 1; transform: none; pointer-events: auto; }
 .card__from { font-size: .9rem; color: var(--sub); }
 .card__from a { border-bottom: 1px solid var(--line); }
 .card__desc { font-size: .92rem; line-height: 1.45; color: var(--sub); }
+.card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 2px;
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--ink);
+  transition: gap .2s var(--ease), color .2s var(--ease);
+}
+.card:hover .card__link { gap: 10px; color: var(--accent); }
 .card__num {
   position: absolute;
   left: 14px; top: 12px;
@@ -1079,6 +1091,7 @@ body.nav-open .mobile-nav { opacity: 1; transform: none; pointer-events: auto; }
   .nav, .search, .header-actions { display: none; }
   .burger { display: block; margin-left: auto; }
   .grid-cards--4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-cards--3 { grid-template-columns: repeat(3, 1fr); }
   .footer-cols { gap: 40px 56px; }
 }
 
@@ -1090,7 +1103,8 @@ body.nav-open .mobile-nav { opacity: 1; transform: none; pointer-events: auto; }
   .box-figure { padding: 18px; }
   .menu-float { top: auto; bottom: 14px; transform: translateX(-50%); left: 50%; width: max-content; max-width: calc(100% - 20px); }
   .menu-float__content { flex-wrap: wrap; justify-content: center; }
-  .grid-cards--2 { grid-template-columns: 1fr; }
+  .grid-cards--2,
+  .grid-cards--3 { grid-template-columns: 1fr; }
   .crit { grid-template-columns: 1fr auto; gap: 6px 16px; }
   .crit__weight { grid-row: 1; text-align: right; }
   .crit__bar { grid-column: 1 / -1; order: 3; }
