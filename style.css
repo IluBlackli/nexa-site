@@ -871,9 +871,9 @@ body.nav-open .mobile-nav { opacity: 1; transform: none; pointer-events: auto; }
   letter-spacing: -.02em;
   border-bottom: 2px solid var(--ink);
   padding-bottom: 4px;
-  transition: opacity .2s var(--ease);
+  transition: color .2s var(--ease), border-color .2s var(--ease);
 }
-.footer-cta__link:hover { opacity: .55; }
+.footer-cta__link:hover { color: var(--yellow); border-bottom-color: var(--yellow); }
 
 .newsletter label { display: block; font-size: .9rem; color: var(--sub); margin-bottom: 12px; }
 .newsletter__field {
