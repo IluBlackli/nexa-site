@@ -266,7 +266,7 @@ body.has-cursor .swatch { cursor: none; }
   color: var(--cream);
   transition: color .2s var(--ease);
 }
-.nav__link:hover { color: #fff; }
+.nav__link:hover { color: var(--yellow); }
 .nav__link .caret { width: 12px; height: 12px; margin-left: 5px; transition: transform .25s var(--ease); }
 .nav__link[aria-expanded="true"] .caret { transform: rotate(180deg); }
 .pillnew {
@@ -368,7 +368,7 @@ body.nav-open .mobile-nav { opacity: 1; transform: none; pointer-events: auto; }
   border-bottom: 1px solid rgba(251, 246, 233, .14);
   transition: color .2s var(--ease);
 }
-.mobile-nav a:not(.btn):hover { color: #fff; }
+.mobile-nav a:not(.btn):hover { color: var(--yellow); }
 .mobile-nav__row { display: flex; gap: 20px; padding: 18px 0 6px; }
 .mobile-nav .btn { margin-top: 10px; }
 
