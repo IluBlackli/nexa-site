@@ -30,11 +30,19 @@
       'about.p3': 'Combinamos design, desenvolvimento de software, inteligência artificial e automação para criar soluções digitais que fazem a diferença no dia a dia dos negócios.',
       'about.p4': 'Desde um website profissional até uma plataforma completa ou um sistema de atendimento com IA, analisamos cada desafio e procuramos a solução mais eficiente.',
       'about.highlight': 'A sua ideia é o ponto de partida. A tecnologia é o que a transforma em realidade.',
-      'serv.label': 'Serviços', 'serv.title': 'O que a nexa faz.', 'serv.tag': 'Serviço',
+      'serv.label': 'Serviços', 'serv.title': 'O que a nexa faz.', 'serv.tag': 'Serviço', 'serv.more': 'Ver detalhe',
       'serv.1.title': 'Sites & Web', 'serv.1.desc': 'Websites, lojas online e landing pages — design e desenvolvimento à medida, rápidos e fáceis de gerir.',
+      'serv.1.long': 'Criamos o teu site de raiz — do design à publicação. Sites institucionais, lojas online e landing pages rápidos, otimizados para telemóvel e para o Google, e simples de gerir. Tratamos também de domínio, alojamento, formulários e manutenção.',
+      'serv.1.list': 'Sites institucionais e one-pages|Lojas online|Landing pages para campanhas|Versões em vários idiomas|SEO técnico e velocidade|Domínio, alojamento e manutenção',
       'serv.2.title': 'IA', 'serv.2.desc': 'Chatbots, assistentes e integrações com modelos de IA aplicados aos produtos e ao atendimento.',
+      'serv.2.long': 'Levamos inteligência artificial para o teu negócio: assistentes e chatbots que respondem a clientes 24/7, ligados aos teus dados e canais. Também usamos IA para pesquisar documentos, gerar e classificar conteúdo e apoiar a equipa no dia a dia.',
+      'serv.2.list': 'Chatbots e assistentes virtuais|Atendimento automático 24/7|Respostas a partir dos teus documentos|Geração e classificação de conteúdo|Integração com WhatsApp, email e site',
       'serv.3.title': 'Automação', 'serv.3.desc': 'Automação de tarefas e fluxos de trabalho, integrações entre ferramentas — menos trabalho manual, menos erros.',
+      'serv.3.long': 'Ligamos as tuas ferramentas e tiramos-te o trabalho manual repetitivo. Criamos fluxos que passam informação entre sistemas, enviam avisos, atualizam folhas e bases de dados e geram relatórios sozinhos.',
+      'serv.3.list': 'Integração entre apps (CRM, email, faturação…)|Fluxos e notificações automáticas|Sincronização de dados|Relatórios e alertas periódicos|Formulários que despoletam ações',
       'serv.4.title': 'Software', 'serv.4.desc': 'Aplicações web, plataformas e dashboards feitos de raiz, à medida de cada negócio.',
+      'serv.4.long': 'Desenvolvemos software à medida quando as ferramentas prontas não chegam: aplicações web, plataformas, áreas de cliente e dashboards. Acompanhamos da ideia ao lançamento — análise, design, desenvolvimento, testes e evolução.',
+      'serv.4.list': 'Aplicações e plataformas web|Áreas de cliente e backoffices|Dashboards e relatórios|APIs e integrações|Manutenção e evolução contínua',
       'work.label': 'Trabalhos', 'work.title': 'Alguns projetos que criámos.',
       'work.tag.website': 'Website', 'work.tag.ia': 'IA & Automação',
       'work.1.desc': 'Site institucional para uma empresa de mudanças nacionais e internacionais — serviços, áreas de atuação, portfólio e pedido de orçamento.',
@@ -80,11 +88,19 @@
       'about.p3': 'Combinamos diseño, desarrollo de software, inteligencia artificial y automatización para crear soluciones digitales que marcan la diferencia en el día a día de los negocios.',
       'about.p4': 'Desde una web profesional hasta una plataforma completa o un sistema de atención con IA, analizamos cada reto y buscamos la solución más eficiente.',
       'about.highlight': 'Tu idea es el punto de partida. La tecnología es lo que la convierte en realidad.',
-      'serv.label': 'Servicios', 'serv.title': 'Lo que hace nexa.', 'serv.tag': 'Servicio',
+      'serv.label': 'Servicios', 'serv.title': 'Lo que hace nexa.', 'serv.tag': 'Servicio', 'serv.more': 'Ver detalle',
       'serv.1.title': 'Sitios web', 'serv.1.desc': 'Webs, tiendas online y landing pages — diseño y desarrollo a medida, rápidos y fáciles de gestionar.',
+      'serv.1.long': 'Creamos tu web desde cero — del diseño a la publicación. Webs corporativas, tiendas online y landing pages rápidas, optimizadas para móvil y para Google, y fáciles de gestionar. Nos ocupamos también del dominio, el alojamiento, los formularios y el mantenimiento.',
+      'serv.1.list': 'Webs corporativas y one-pages|Tiendas online|Landing pages para campañas|Versiones en varios idiomas|SEO técnico y velocidad|Dominio, alojamiento y mantenimiento',
       'serv.2.title': 'IA', 'serv.2.desc': 'Chatbots, asistentes e integraciones con modelos de IA aplicados a los productos y a la atención al cliente.',
+      'serv.2.long': 'Llevamos la inteligencia artificial a tu negocio: asistentes y chatbots que responden a los clientes 24/7, conectados a tus datos y canales. También usamos IA para buscar en documentos, generar y clasificar contenido y apoyar al equipo en el día a día.',
+      'serv.2.list': 'Chatbots y asistentes virtuales|Atención automática 24/7|Respuestas a partir de tus documentos|Generación y clasificación de contenido|Integración con WhatsApp, email y web',
       'serv.3.title': 'Automatización', 'serv.3.desc': 'Automatización de tareas y flujos de trabajo, integraciones entre herramientas — menos trabajo manual, menos errores.',
+      'serv.3.long': 'Conectamos tus herramientas y eliminamos el trabajo manual repetitivo. Creamos flujos que pasan información entre sistemas, envían avisos, actualizan hojas y bases de datos y generan informes solos.',
+      'serv.3.list': 'Integración entre apps (CRM, email, facturación…)|Flujos y notificaciones automáticas|Sincronización de datos|Informes y alertas periódicas|Formularios que disparan acciones',
       'serv.4.title': 'Software', 'serv.4.desc': 'Aplicaciones web, plataformas y dashboards hechos desde cero, a medida de cada negocio.',
+      'serv.4.long': 'Desarrollamos software a medida cuando las herramientas estándar no bastan: aplicaciones web, plataformas, áreas de cliente y dashboards. Acompañamos de la idea al lanzamiento — análisis, diseño, desarrollo, pruebas y evolución.',
+      'serv.4.list': 'Aplicaciones y plataformas web|Áreas de cliente y back-offices|Dashboards e informes|APIs e integraciones|Mantenimiento y evolución continua',
       'work.label': 'Proyectos', 'work.title': 'Algunos proyectos que hemos creado.',
       'work.tag.website': 'Web', 'work.tag.ia': 'IA & Automatización',
       'work.1.desc': 'Web corporativa para una empresa de mudanzas nacionales e internacionales — servicios, áreas de actuación, portafolio y solicitud de presupuesto.',
@@ -130,11 +146,19 @@
       'about.p3': 'We combine design, software development, artificial intelligence and automation to build digital solutions that make a real difference to everyday business.',
       'about.p4': 'From a professional website to a full platform or an AI-powered support system, we look at each challenge and find the most efficient solution.',
       'about.highlight': 'Your idea is the starting point. Technology is what turns it into reality.',
-      'serv.label': 'Services', 'serv.title': 'What nexa does.', 'serv.tag': 'Service',
+      'serv.label': 'Services', 'serv.title': 'What nexa does.', 'serv.tag': 'Service', 'serv.more': 'See detail',
       'serv.1.title': 'Websites & Web', 'serv.1.desc': 'Websites, online stores and landing pages — custom design and development, fast and easy to manage.',
+      'serv.1.long': 'We build your site from scratch — from design to launch. Corporate sites, online stores and landing pages that are fast, mobile- and Google-optimised, and easy for you to manage. We also handle domain, hosting, forms and maintenance.',
+      'serv.1.list': 'Corporate sites and one-pagers|Online stores|Campaign landing pages|Multi-language versions|Technical SEO and speed|Domain, hosting and maintenance',
       'serv.2.title': 'AI', 'serv.2.desc': 'Chatbots, assistants and integrations with AI models applied to products and customer support.',
+      'serv.2.long': 'We bring artificial intelligence into your business: assistants and chatbots that answer customers 24/7, connected to your data and channels. We also use AI to search documents, generate and classify content and support your team day to day.',
+      'serv.2.list': 'Chatbots and virtual assistants|Automated 24/7 support|Answers from your own documents|Content generation and classification|Integration with WhatsApp, email and web',
       'serv.3.title': 'Automation', 'serv.3.desc': 'Task and workflow automation, integrations between tools — less manual work, fewer errors.',
+      'serv.3.long': 'We connect your tools and take repetitive manual work off your hands. We build flows that move information between systems, send alerts, update sheets and databases and generate reports on their own.',
+      'serv.3.list': 'Integration between apps (CRM, email, billing…)|Automated flows and notifications|Data synchronisation|Scheduled reports and alerts|Forms that trigger actions',
       'serv.4.title': 'Software', 'serv.4.desc': 'Web apps, platforms and dashboards built from scratch, tailored to each business.',
+      'serv.4.long': 'We build custom software when off-the-shelf tools fall short: web apps, platforms, client areas and dashboards. We are with you from idea to launch — analysis, design, development, testing and iteration.',
+      'serv.4.list': 'Web apps and platforms|Client areas and back-offices|Dashboards and reports|APIs and integrations|Ongoing maintenance and iteration',
       'work.label': 'Work', 'work.title': 'A few projects we’ve built.',
       'work.tag.website': 'Website', 'work.tag.ia': 'AI & Automation',
       'work.1.desc': 'Corporate website for a national and international moving company — services, coverage areas, portfolio and quote requests.',
@@ -172,8 +196,10 @@
     try { s = localStorage.getItem('lang'); } catch (e) {}
     return LANGS.indexOf(s) > -1 ? s : 'pt';
   }
+  var activeLang = 'pt';
   function applyLang(lang) {
     if (LANGS.indexOf(lang) < 0) lang = 'pt';
+    activeLang = lang;
     var d = I18N[lang];
     $$('[data-i18n]').forEach(function (el) {
       var v = d[el.getAttribute('data-i18n')];
@@ -203,7 +229,74 @@
     });
     var lf = document.querySelector('.footer-bottom .lang');
     if (lf) lf.textContent = lang.toUpperCase();
+    if (typeof renderServiceModal === 'function' && openServiceId) renderServiceModal(openServiceId);
   }
+
+  /* ---------- Modal de detalhe de serviço ---------- */
+  var smodal = $('[data-smodal]');
+  var openServiceId = null;
+  function renderServiceModal(n) {
+    if (!smodal) return;
+    var d = I18N[activeLang] || I18N.pt;
+    var card = $('#servicos .card[data-service="' + n + '"]');
+    var art = card && card.querySelector('.card__art');
+    var iconEl = $('[data-smodal-icon]', smodal);
+    var titleEl = $('[data-smodal-title]', smodal);
+    var leadEl = $('[data-smodal-lead]', smodal);
+    var listEl = $('[data-smodal-list]', smodal);
+    if (iconEl) iconEl.innerHTML = art ? art.innerHTML : '';
+    if (titleEl) titleEl.textContent = d['serv.' + n + '.title'] || '';
+    if (leadEl) leadEl.textContent = d['serv.' + n + '.long'] || d['serv.' + n + '.desc'] || '';
+    if (listEl) {
+      listEl.innerHTML = '';
+      (d['serv.' + n + '.list'] || '').split('|').forEach(function (item) {
+        item = item.trim();
+        if (!item) return;
+        var li = document.createElement('li');
+        li.textContent = item;
+        listEl.appendChild(li);
+      });
+    }
+  }
+  if (smodal) {
+    var sLastFocus = null;
+    var openServiceModal = function (n, trigger) {
+      openServiceId = n;
+      renderServiceModal(n);
+      sLastFocus = trigger || document.activeElement;
+      smodal.hidden = false;
+      document.body.classList.add('smodal-open');
+      var x = smodal.querySelector('.smodal__x');
+      if (x) x.focus();
+    };
+    var closeServiceModal = function () {
+      smodal.hidden = true;
+      openServiceId = null;
+      document.body.classList.remove('smodal-open');
+      if (sLastFocus && sLastFocus.focus) sLastFocus.focus();
+    };
+    $$('#servicos .card[data-service]').forEach(function (card) {
+      card.addEventListener('click', function (ev) {
+        ev.preventDefault();
+        openServiceModal(card.getAttribute('data-service'), card.querySelector('.card__media'));
+      });
+    });
+    $$('[data-smodal-close]', smodal).forEach(function (el) {
+      el.addEventListener('click', closeServiceModal);
+    });
+    document.addEventListener('keydown', function (ev) {
+      if (ev.key === 'Escape' && !smodal.hidden) closeServiceModal();
+    });
+    var sCta = smodal.querySelector('.smodal__cta');
+    if (sCta) {
+      sCta.addEventListener('click', function () {
+        closeServiceModal();
+        var t = document.querySelector('.nav [data-contact]') || document.querySelector('[data-contact]');
+        if (t) t.click();
+      });
+    }
+  }
+
   applyLang(getLang());
 
   /* ---------- Seletor de idioma (menu personalizado) ---------- */

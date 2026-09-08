@@ -924,14 +924,51 @@ body.nav-open .mobile-nav { opacity: 1; transform: none; pointer-events: auto; }
   color: var(--muted);
 }
 .card__title { font-size: 1rem; font-weight: 500; }
-.card__title a { transition: opacity .2s var(--ease); }
-.card__title a:hover { opacity: .55; }
+.card__title a,
+.card__title-btn { font: inherit; color: inherit; text-align: left; transition: opacity .2s var(--ease); }
+.card__title a:hover,
+.card__title-btn:hover { opacity: .55; }
 .card__from { font-size: .9rem; color: var(--sub); }
 .card__from a { border-bottom: 1px solid var(--line); }
 .card__desc { font-size: .92rem; line-height: 1.45; color: var(--sub); }
 
 /* Ilustrações dos serviços */
 #servicos .card__media { background: linear-gradient(155deg, #0a3260, #001229); }
+
+/* Cartões de serviço clicáveis */
+.card--clickable .card__media { cursor: pointer; width: 100%; padding: 0; }
+.card--clickable .card__media:focus-visible { outline: 2px solid var(--yellow); outline-offset: 3px; }
+.card--clickable .card__title-btn { cursor: pointer; }
+.card--clickable .card__title-btn:focus-visible { outline: 2px solid var(--yellow); outline-offset: 2px; border-radius: 3px; }
+.card__more {
+  position: absolute;
+  left: 14px;
+  bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(251, 246, 233, .14);
+  border: 1px solid rgba(251, 246, 233, .28);
+  color: var(--cream);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity .25s var(--ease), transform .25s var(--ease);
+}
+.card__more::before {
+  content: "+";
+  font-size: .95em;
+  line-height: 1;
+}
+.card--clickable .card__media:hover .card__more,
+.card--clickable .card__media:focus-visible .card__more { opacity: 1; transform: none; }
+@media (hover: none) {
+  .card__more { opacity: 1; transform: none; }
+}
 
 /* Miniatura de site (Trabalhos) */
 #trabalhos .card__media { background: linear-gradient(155deg, #0a3260, #001229); }
@@ -1274,6 +1311,93 @@ body.nav-open .mobile-nav { opacity: 1; transform: none; pointer-events: auto; }
 }
 
 /* -------------------------------------------------------------
+   Modal: detalhe de serviço
+   ------------------------------------------------------------- */
+.smodal {
+  position: fixed;
+  inset: 0;
+  z-index: 9990;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+.smodal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 15, 39, .72);
+  animation: cmodalFade .2s var(--ease);
+}
+.smodal__box {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 30px 70px -20px rgba(0, 15, 39, .4);
+  animation: cmodalPop .28s var(--ease);
+}
+.smodal__x {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  color: var(--sub);
+  transition: background .2s var(--ease), color .2s var(--ease);
+}
+.smodal__x:hover { background: var(--mist); color: var(--ink); }
+.smodal__x svg { width: 18px; height: 18px; }
+.smodal__icon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: var(--navy);
+  color: var(--cream);
+  margin-bottom: 16px;
+}
+.smodal__icon svg { width: 30px; height: 30px; }
+.smodal__tag {
+  font-size: .72rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.smodal__title { margin-top: 6px; font-size: 1.5rem; font-weight: 700; letter-spacing: -.01em; }
+.smodal__lead { margin-top: 12px; font-size: 1rem; line-height: 1.6; color: var(--sub); }
+.smodal__list { margin-top: 16px; display: flex; flex-direction: column; gap: 9px; }
+.smodal__list li {
+  position: relative;
+  padding-left: 22px;
+  font-size: .95rem;
+  line-height: 1.45;
+  color: var(--ink);
+}
+.smodal__list li::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: .5em;
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  background: var(--yellow);
+}
+.smodal__cta { width: 100%; margin-top: 22px; }
+body.smodal-open { overflow: hidden; }
+body.smodal-open .marquee-top__track,
+body.smodal-open .hero-logo__word,
+body.smodal-open .hero-logo__sheen { animation-play-state: paused; }
+
+/* -------------------------------------------------------------
    14. Modal "Falar connosco" + Toast + cookie
    ------------------------------------------------------------- */
 .cmodal {
@@ -1376,7 +1500,8 @@ body.cmodal-open .hero-logo__sheen { animation-play-state: paused; }
 @keyframes cmodalFade { from { opacity: 0; } }
 @keyframes cmodalPop { from { opacity: 0; transform: translateY(12px) scale(.97); } }
 @media (prefers-reduced-motion: reduce) {
-  .cmodal__backdrop, .cmodal__box { animation: none; }
+  .cmodal__backdrop, .cmodal__box,
+  .smodal__backdrop, .smodal__box { animation: none; }
 }
 
 .toast {

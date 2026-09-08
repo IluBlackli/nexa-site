@@ -234,8 +234,8 @@
         <p class="block__title" data-i18n="serv.title">O que a nexa faz.</p>
       </div>
       <ul class="grid-cards grid-cards--4">
-        <li class="card reveal" style="--i:0">
-          <a class="card__media" href="#" data-cursor>
+        <li class="card card--clickable reveal" style="--i:0" data-service="1">
+          <button type="button" class="card__media" data-cursor data-i18n-attr="aria-label:serv.1.title">
             <span class="card__art" aria-hidden="true">
               <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="16" y="22" width="68" height="54" rx="7"/>
@@ -248,13 +248,14 @@
               </svg>
             </span>
             <span class="card__num" aria-hidden="true">01</span>
-          </a>
+            <span class="card__more" aria-hidden="true" data-i18n="serv.more">Ver detalhe</span>
+          </button>
           <p class="card__tag" data-i18n="serv.tag">Serviço</p>
-          <h3 class="card__title"><a href="#" data-i18n="serv.1.title">Sites &amp; Web</a></h3>
+          <h3 class="card__title"><button type="button" class="card__title-btn" data-i18n="serv.1.title">Sites &amp; Web</button></h3>
           <p class="card__desc" data-i18n="serv.1.desc">Websites, lojas online e landing pages — design e desenvolvimento à medida, rápidos e fáceis de gerir.</p>
         </li>
-        <li class="card reveal" style="--i:1">
-          <a class="card__media" href="#" data-cursor>
+        <li class="card card--clickable reveal" style="--i:1" data-service="2">
+          <button type="button" class="card__media" data-cursor data-i18n-attr="aria-label:serv.2.title">
             <span class="card__art" aria-hidden="true">
               <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="30" y="30" width="40" height="40" rx="9"/>
@@ -263,13 +264,14 @@
               </svg>
             </span>
             <span class="card__num" aria-hidden="true">02</span>
-          </a>
+            <span class="card__more" aria-hidden="true" data-i18n="serv.more">Ver detalhe</span>
+          </button>
           <p class="card__tag" data-i18n="serv.tag">Serviço</p>
-          <h3 class="card__title"><a href="#" data-i18n="serv.2.title">IA</a></h3>
+          <h3 class="card__title"><button type="button" class="card__title-btn" data-i18n="serv.2.title">IA</button></h3>
           <p class="card__desc" data-i18n="serv.2.desc">Chatbots, assistentes e integrações com modelos de IA aplicados aos produtos e ao atendimento.</p>
         </li>
-        <li class="card reveal" style="--i:2">
-          <a class="card__media" href="#" data-cursor>
+        <li class="card card--clickable reveal" style="--i:2" data-service="3">
+          <button type="button" class="card__media" data-cursor data-i18n-attr="aria-label:serv.3.title">
             <span class="card__art" aria-hidden="true">
               <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M26 44A25 25 0 0 1 70 36"/>
@@ -280,13 +282,14 @@
               </svg>
             </span>
             <span class="card__num" aria-hidden="true">03</span>
-          </a>
+            <span class="card__more" aria-hidden="true" data-i18n="serv.more">Ver detalhe</span>
+          </button>
           <p class="card__tag" data-i18n="serv.tag">Serviço</p>
-          <h3 class="card__title"><a href="#" data-i18n="serv.3.title">Automação</a></h3>
+          <h3 class="card__title"><button type="button" class="card__title-btn" data-i18n="serv.3.title">Automação</button></h3>
           <p class="card__desc" data-i18n="serv.3.desc">Automação de tarefas e fluxos de trabalho, integrações entre ferramentas — menos trabalho manual, menos erros.</p>
         </li>
-        <li class="card reveal" style="--i:3">
-          <a class="card__media" href="#" data-cursor>
+        <li class="card card--clickable reveal" style="--i:3" data-service="4">
+          <button type="button" class="card__media" data-cursor data-i18n-attr="aria-label:serv.4.title">
             <span class="card__art" aria-hidden="true">
               <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M37 28 18 50l19 22"/>
@@ -295,9 +298,10 @@
               </svg>
             </span>
             <span class="card__num" aria-hidden="true">04</span>
-          </a>
+            <span class="card__more" aria-hidden="true" data-i18n="serv.more">Ver detalhe</span>
+          </button>
           <p class="card__tag" data-i18n="serv.tag">Serviço</p>
-          <h3 class="card__title"><a href="#" data-i18n="serv.4.title">Software</a></h3>
+          <h3 class="card__title"><button type="button" class="card__title-btn" data-i18n="serv.4.title">Software</button></h3>
           <p class="card__desc" data-i18n="serv.4.desc">Aplicações web, plataformas e dashboards feitos de raiz, à medida de cada negócio.</p>
         </li>
       </ul>
@@ -445,6 +449,22 @@
       <div class="footer-word" aria-hidden="true">nexa</div>
     </div>
   </footer>
+
+  <!-- ================= Modal: detalhe de serviço ================= -->
+  <div class="smodal" data-smodal hidden>
+    <div class="smodal__backdrop" data-smodal-close></div>
+    <div class="smodal__box" role="dialog" aria-modal="true" aria-labelledby="smodal-title">
+      <button class="smodal__x" type="button" data-smodal-close aria-label="Fechar" data-i18n-attr="aria-label:modal.close">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+      <span class="smodal__icon" data-smodal-icon aria-hidden="true"></span>
+      <p class="smodal__tag" data-i18n="serv.tag">Serviço</p>
+      <h2 id="smodal-title" class="smodal__title" data-smodal-title></h2>
+      <p class="smodal__lead" data-smodal-lead></p>
+      <ul class="smodal__list" data-smodal-list></ul>
+      <button type="button" class="btn btn--solid smodal__cta" data-i18n="btn.falar">Falar connosco</button>
+    </div>
+  </div>
 
   <!-- ================= Modal: falar connosco ================= -->
   <div class="cmodal" data-cmodal hidden>
